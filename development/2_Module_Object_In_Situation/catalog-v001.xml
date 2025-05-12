@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.cidoc-crm.org/cidoc-crm/" uri="file:/C:/Users/baroncis/Documents/ontologies/CIDOC_CRM_version7_1_3.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" uri="file:/C:/Users/baroncis/Documents/ontologies/dolce.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1747068631175" name="http://www.ObjectInSituationModule/ois/" uri="modelet_object_in_situation_aligned.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1747068631175" name="http://www.semanticweb.org/baroncis/ontologies/2025/4/untitled-ontology-26/" uri="modelet_object_in_situation.rdf"/>
+    </group>
+</catalog>

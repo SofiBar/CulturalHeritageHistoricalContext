@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/baroncis/ontologies/2025/4/untitled-ontology-26/"
+     xml:base="http://www.semanticweb.org/baroncis/ontologies/2025/4/untitled-ontology-26/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.ObjectInSituationModuleModelet/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#hasMemberEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModuleModelet/#hasMemberEvent">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModuleModelet/#Event"/>
+        <rdfs:label xml:lang="en">Property to indicate the events of a series</rdfs:label>
+        <rdfs:label xml:lang="en">has member event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#hasUnifyingFactor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModuleModelet/#hasUnifyingFactor">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Property indicating the unifying factors of a collection of events repeating over time (e.g., the same place)</rdfs:comment>
+        <rdfs:comment xml:lang="en">has unifying factor</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModuleModelet/#includesEvent">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModuleModelet/#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#includesEventsOfType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModuleModelet/#includesEventsOfType">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModuleModelet/#EventType"/>
+        <rdfs:comment xml:lang="en">Relate the event series with the type of event that is included (e.g., mass, procession).</rdfs:comment>
+        <rdfs:label xml:lang="en">includes events of type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#includesObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModuleModelet/#includesObject">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModuleModelet/#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#includesObjectFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModuleModelet/#includesObjectFunction">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModuleModelet/#Function"/>
+        <rdfs:comment>Property to specify which function an object acquires in a specific situation</rdfs:comment>
+        <rdfs:label xml:lang="en">includes object function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#Event -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#Event"/>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#EventType -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#EventType"/>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#Function -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#Function">
+        <rdfs:comment>A class identifying the function that an object acquires (e.g., the “drinking” function of a vessel or a liturgic function of a religious object)</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#Object -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#Object"/>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#ObjectInRecurrentRegularEvent -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrentRegularEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event"/>
+        <rdfs:comment>A situation in which unifying characteristics of events regularly recurring over time are identified, and the time interval with which they are repeated can be indicated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Recurrent Regular Event</rdfs:label>
+        <rdfs:seeAlso>http://www.ontologydesignpatterns.org/cp/owl/recurrenteventseries.owl</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInSituation"/>
+        <owl:disjointWith rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInUniqueEvent"/>
+        <rdfs:comment xml:lang="en">Objects observed in situations of events repeated over time, either in regular or irregular intervals, presenting unifying characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Recurrent Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_IrregularEvent -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_IrregularEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInRecurrent_Event"/>
+        <rdfs:comment>A situation grouping events in which the same object participates having similar, unifying characteristics over time (e.g., function).</rdfs:comment>
+        <rdfs:label>Object in Recurrent Irregular Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#ObjectInSituation -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#ObjectInSituation">
+        <rdfs:comment xml:lang="en">A specific type of Situation in which an object presents special, relevant features that cannot be described as a modification of the object (e.g., the change of its function). It is meant to be related to a :HistoricalFrame which provides the relation to the belief system in which the object is situated or to a dul:Event in which such characteristics are shown.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#ObjectInUniqueEvent -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#ObjectInUniqueEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModuleModelet/#ObjectInSituation"/>
+        <rdfs:comment xml:lang="en">A situation to observe certain traits of an object present in an event that occurs only once (e.g., a function that the object acquiress in that specific event).</rdfs:comment>
+        <rdfs:label xml:lang="en">Object In Unique Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#PracticalFunction -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#PracticalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModuleModelet/#Function"/>
+        <owl:disjointWith rdf:resource="http://www.ObjectInSituationModuleModelet/#SocialFunction"/>
+        <rdfs:comment xml:lang="en">A class identifying the practical function that an object acquires (e.g., the “drinking” function of a vessel)</rdfs:comment>
+        <rdfs:label xml:lang="en">Practical Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModuleModelet/#SocialFunction -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModuleModelet/#SocialFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModuleModelet/#Function"/>
+        <rdfs:comment>A class identifying the socially attributed, non strictly practical function that an object acquires (e.g., the healing function of St. Servatius cup in a catholic context)</rdfs:comment>
+        <rdfs:label xml:lang="en">Social Function</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

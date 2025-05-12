@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.EvolutionModelet//"
+     xml:base="http://www.EvolutionModelet//"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.EvolutionModelet/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.EvolutionModelet/added -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/added">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PartAddition"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/augmented -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/augmented">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PartAddition"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/creates -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/creates">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/ConceptualVariation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/VisualItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/diminished -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/diminished">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PartRemoval"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/hasRole">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/includesEvent">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/Situation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/ConceptualVariation"/>
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/PartAddition"/>
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/PartRemoval"/>
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/Transformation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/includesObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/includesObject">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/Situation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/includesObjectFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/includesObjectFunction">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/includesTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/includesTime">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/isPartOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/ConceptualVariation"/>
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/PartAddition"/>
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/PartRemoval"/>
+                    <rdf:Description rdf:about="http://www.EvolutionModelet/Transformation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/ObjectStoryline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/isParticipantIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/isParticipantIn">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/ObjectStoryline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/isSettingFor">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/Transition"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/ObjectInSituation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/modifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/modifies">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/ConceptualVariation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/VisualItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/precedes">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/ObjectInSituation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/removed -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/removed">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PartRemoval"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/resultedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/resultedIn">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/Transformation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/showsVisualItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/showsVisualItem">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/VisualItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModelet/transformed -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModelet/transformed">
+        <rdfs:domain rdf:resource="http://www.EvolutionModelet/Transformation"/>
+        <rdfs:range rdf:resource="http://www.EvolutionModelet/PhysicalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.EvolutionModelet/ConceptualVariation -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/ConceptualVariation"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/Function -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/Function"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/ObjectInSituation -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/ObjectInSituation">
+        <rdfs:subClassOf rdf:resource="http://www.EvolutionModelet/Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.EvolutionModelet/ObjectStoryline -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/ObjectStoryline"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/PartAddition -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/PartAddition"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/PartRemoval -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/PartRemoval"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/PhysicalThing -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/PhysicalThing"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/Situation -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/Situation"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/TimeInterval -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/TimeInterval"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/Transformation -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/Transformation"/>
+    
+
+
+    <!-- http://www.EvolutionModelet/Transition -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/Transition">
+        <rdfs:subClassOf rdf:resource="http://www.EvolutionModelet/Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.EvolutionModelet/VisualItem -->
+
+    <owl:Class rdf:about="http://www.EvolutionModelet/VisualItem"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

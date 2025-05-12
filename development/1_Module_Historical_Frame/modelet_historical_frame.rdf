@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.FrameModuleModelet/"
+     xml:base="http://www.FrameModuleModelet/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.FrameModuleModelet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.FrameModuleModelet#believedThing -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#believedThing">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#Belief"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#fallsWithin -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#fallsWithin">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#hasContext">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#hasCreationContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#hasCreationContext">
+        <rdfs:subPropertyOf rdf:resource="http://www.FrameModuleModelet#hasContext"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#hasPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#hasPlace">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#hasTime">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#includesCulturalTrait -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#includesCulturalTrait">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#CulturalPhenomenon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#motivates -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#motivates">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#overlapsWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#overlapsWith">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#refersToCulture -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#refersToCulture">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+        <rdfs:range rdf:resource="http://www.FrameModuleModelet#Culture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.FrameModuleModelet#separatedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.FrameModuleModelet#separatedFrom">
+        <rdfs:domain rdf:resource="http://www.FrameModuleModelet#HistoricalFrame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.FrameModuleModelet#Belief -->
+
+    <owl:Class rdf:about="http://www.FrameModuleModelet#Belief">
+        <rdfs:subClassOf rdf:resource="http://www.FrameModuleModelet#CulturalPhenomenon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.FrameModuleModelet#CulturalPhenomenon -->
+
+    <owl:Class rdf:about="http://www.FrameModuleModelet#CulturalPhenomenon"/>
+    
+
+
+    <!-- http://www.FrameModuleModelet#Culture -->
+
+    <owl:Class rdf:about="http://www.FrameModuleModelet#Culture"/>
+    
+
+
+    <!-- http://www.FrameModuleModelet#HistoricalFrame -->
+
+    <owl:Class rdf:about="http://www.FrameModuleModelet#HistoricalFrame"/>
+    
+
+
+    <!-- http://www.FrameModuleModelet#Place -->
+
+    <owl:Class rdf:about="http://www.FrameModuleModelet#Place"/>
+    
+
+
+    <!-- http://www.FrameModuleModelet#Time -->
+
+    <owl:Class rdf:about="http://www.FrameModuleModelet#Time"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
