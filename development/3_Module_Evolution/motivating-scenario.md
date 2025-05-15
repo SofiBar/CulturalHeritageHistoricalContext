@@ -1,0 +1,3 @@
+# Motivating scenario
+
+Art historians often analyze the evolution over time and space of CH objects. The evolution can occur at multiple levels, such as 1) a physical modification of the object (e.g., a restoration), 2) an immaterial one (e.g., an object restored with a different iconography), or of its function. The cultural context in which they are embedded can explain the transformations that occur to objects. 

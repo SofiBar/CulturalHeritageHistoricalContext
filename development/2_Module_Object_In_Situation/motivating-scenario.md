@@ -1,0 +1,4 @@
+# Motivating scenario
+
+A Cultural Heritage (CH) object may present immaterial variations, agency, and uses according to the context in which it is placed. The context may be a culture, a single event, or events repeated over time, regularly or irregularly. As Anderson states, the cultural system in which the object is embedded determines its practical or social function, answering the question “what is it for?”.   
+Furthermore, events of the immaterial cultural heritage, such as festivities and processions, recur over time. Objects involved in them can present recurring characteristics and functions (e.g., the chest of distress carried in procession acquires the function of “protection”). Such events may occur in regular and irregular time intervals, and the single events may present further, unique characteristics (e.g., the theme of a procession in a specific year). 
