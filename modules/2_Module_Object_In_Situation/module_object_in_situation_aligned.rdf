@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ObjectInSituationModule/ois/"
+     xml:base="http://www.ObjectInSituationModule/ois/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ois="http://www.ObjectInSituationModule/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.ObjectInSituationModule/ois/">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#hasMemberEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModule/ois/#hasMemberEvent">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:label xml:lang="en">Property to indicate the events of a series</rdfs:label>
+        <rdfs:label xml:lang="en">has member event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#hasUnifyingFactor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModule/ois/#hasUnifyingFactor">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Property indicating the unifying factors of a collection of events repeating over time (e.g., the same place)</rdfs:comment>
+        <rdfs:comment xml:lang="en">has unifying factor</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#includesEventsOfType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModule/ois/#includesEventsOfType">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType"/>
+        <rdfs:comment xml:lang="en">Relate the event series with the type of event that is included (e.g., mass, procession).</rdfs:comment>
+        <rdfs:label xml:lang="en">includes events of type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#includesObjectFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModule/ois/#includesObjectFunction">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModule/ois/#Function"/>
+        <rdfs:comment>Property to specify which function an object acquires in a specific situation</rdfs:comment>
+        <rdfs:label xml:lang="en">includes object function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ObjectInSituationModule/ois/#hasMemberEvent"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>A relation between collections and entities, e.g. &apos;my collection of saxophones includes an old Adolphe Sax original alto&apos; (i.e. my collection has member an Adolphe Sax alto).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">ha membro</rdfs:label>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>A relation between an object and a role, e.g. the person &apos;John&apos; has role &apos;student&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">ha ruolo</rdfs:label>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isEventIncludedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:comment>A relation between situations and events, e.g. &apos;this morning I&apos;ve prepared my coffee and had my fingers burnt&apos; (i.e.: the preparation of my coffee this morning included a burning of my fingers).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">include l&apos;evento</rdfs:label>
+        <rdfs:label xml:lang="en">includes event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isObjectIncludedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>A relation between situations and objects, e.g. &apos;this morning I&apos;ve prepared my coffee and had my fingers burnt&apos; (i.e.: the preparation of my coffee this morning included me).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">include l&apos;oggetto</rdfs:label>
+        <rdfs:label xml:lang="en">includes object</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/hco/#hasContext -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/hco/#hasContext"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#Function -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#Function">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+        <rdfs:comment>A class identifying the function that an object acquires (e.g., the “drinking” function of a vessel or a liturgic function of a religious object)</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#ObjectInRecurrentRegularEvent -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#ObjectInRecurrentRegularEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event"/>
+        <rdfs:comment>A situation in which unifying characteristics of events regularly recurring over time are identified, and the time interval with which they are repeated can be indicated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Recurrent Regular Event</rdfs:label>
+        <rdfs:seeAlso>http://www.ontologydesignpatterns.org/cp/owl/recurrenteventseries.owl</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInSituation"/>
+        <owl:disjointWith rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInUniqueEvent"/>
+        <rdfs:comment xml:lang="en">Objects observed in situations of events repeated over time, either in regular or irregular intervals, presenting unifying characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Recurrent Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_IrregularEvent -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_IrregularEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInRecurrent_Event"/>
+        <rdfs:comment>A situation grouping events in which the same object participates having similar, unifying characteristics over time (e.g., function).</rdfs:comment>
+        <rdfs:label>Object in Recurrent Irregular Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#ObjectInSituation -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#ObjectInSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:comment xml:lang="en">A specific type of Situation in which an object presents special, relevant features that cannot be described as a modification of the object (e.g., the change of its function). It is meant to be related to a :HistoricalFrame which provides the relation to the belief system in which the object is situated or to a dul:Event in which such characteristics are shown.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#ObjectInUniqueEvent -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#ObjectInUniqueEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInSituation"/>
+        <rdfs:comment xml:lang="en">A situation to observe certain traits of an object present in an event that occurs only once (e.g., a function that the object acquiress in that specific event).</rdfs:comment>
+        <rdfs:label xml:lang="en">Object In Unique Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#PracticalFunction -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#PracticalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#Function"/>
+        <owl:disjointWith rdf:resource="http://www.ObjectInSituationModule/ois/#SocialFunction"/>
+        <rdfs:comment xml:lang="en">A class identifying the practical function that an object acquires (e.g., the “drinking” function of a vessel)</rdfs:comment>
+        <rdfs:label xml:lang="en">Practical Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#SocialFunction -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#SocialFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#Function"/>
+        <rdfs:comment>A class identifying the socially attributed, non strictly practical function that an object acquires (e.g., the healing function of St. Servatius cup in a catholic context)</rdfs:comment>
+        <rdfs:label xml:lang="en">Social Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">
+        <owl:disjointWith rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description">
+        <owl:disjointWith rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:comment>A Description is a SocialObject that represents a conceptualization. 
+It can be thought also as a &apos;descriptive context&apos; that uses or defines concepts in order to create a view on a &apos;relational context&apos; (cf. Situation) out of a set of data or observations. 
+For example, a Plan is a Description of some actions to be executed by agents in a certain way, with certain parameters; a Diagnosis is a Description that provides an interpretation for a set of observed entities, etc.
+Descriptions &apos;define&apos; or &apos;use&apos; concepts, and can be &apos;satisfied&apos; by situations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <rdfs:label xml:lang="it">Descrizione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>Any physical, social, or mental process, event, or state.
+
+More theoretically, events can be classified in different ways, possibly based on &apos;aspect&apos; (e.g. stative, continuous, accomplishement, achievement, etc.), on &apos;agentivity&apos; (e.g. intentional, natural, etc.), or on &apos;typical participants&apos; (e.g. human, physical, abstract, food, etc.).
+Here no special direction is taken, and the following explains why: events are related to observable situations, and they can have different views at a same time.
+If a position has to be suggested here anyway, the participant-based classification of events seems the most stable and appropriate for many modelling problems.
+
+(1) Alternative aspectual views
+
+Consider a same event &apos;rock erosion in the Sinni valley&apos;: it can be conceptualized as an accomplishment (what has brought a certain state to occur), as an achievement (the state resulting from a previous accomplishment), as a punctual event (if we collapse the time interval of the erosion into a time point), or as a transition (something that has changed from a state to a different one). 
+In the erosion case, we could therefore have good motivations to shift from one aspect to another: a) causation focus, b) effectual focus, c) historical condensation, d) transition (causality).
+
+The different views refer to the same event, but are still different: how to live with this seeming paradox? 
+A typical solution e.g. in linguistics (cf. Levin&apos;s aspectual classes) and in DOLCE Full (cf. WonderWeb D18 axiomatization) is to classify events based on aspectual differences. But this solution would create different identities for a same event, where the difference is only based on the modeller&apos;s attitude.
+An alternative solution is suggested here, and exploits the notion of (observable) Situation; a Situation is a view, consistent with a Description, which can be observed of a set of entities. It can also be seen as a &apos;relational context&apos; created by an observer on the basis of a &apos;frame&apos;. Therefore, a Situation allows to create a context where each particular view can have a proper identity, while the Event preserves its own identity. 
+For example, ErosionAsAccomplishment is a Situation where rock erosion is observed as a process leading to a certain achievement: the conditions (roles, parameters) that suggest such view are stated in a Description, which acts as a &apos;theory of accomplishments&apos;. Similarly, ErosionAsTransition is a Situation where rock erosion is observed as an event that has changed a state to another: the conditions for such interpretation are stated in a different Description, which acts as a &apos;theory of state transitions&apos;.
+Consider that in no case the actual event is changed or enriched in parts by the aspectual view.
+
+(2) Alternative intentionality views
+
+Similarly to aspectual views, several intentionality views can be provided for a same Event. For example, one can investigate if an avalanche has been caused by immediate natural forces, or if there is any hint of an intentional effort to activate those natural forces.
+Also in this case, the Event as such has not different identities, while the causal analysis generates situations with different identities, according to what Description is taken for interpreting the Event. 
+On the other hand, if the possible actions of an Agent causing the starting of an avalanche are taken as parts of the Event, then this makes its identity change, because we are adding a part to it. 
+Therefore, if intentionality is a criterion to classify events or not, this depends on if an ontology designer wants to consider causality as a relevant dimension for events&apos; identity.
+
+(3) Alternative participant views
+
+A slightly different case is when we consider the basic participants to an Event. In this case, the identity of the Event is affected by the participating objects, because it depends on them. 
+For example, if snow, mountain slopes, wind, waves, etc. are considered as an avalanche basic participants, or if we also want to add water, human agents, etc., that makes the identity of an avalanche change.
+Anyway, this approach to event classification is based on the designer&apos;s choices, and more accurately mirrors lexical or commonsense classifications (see. e.g. WordNet &apos;supersenses&apos; for verb synsets).
+
+Ultimately, this discussion has no end, because realists will keep defending the idea that events in reality are not changed by the way we describe them, while constructivists will keep defending the idea that, whatever &apos;true reality&apos; is about, it can&apos;t be modelled without the theoretical burden of how we observe and describe it. 
+Both positions are in principle valid, but, if taken too radically, they focus on issues that are only partly relevant to the aim of computational ontologies, which assist domain experts in representing a certain portion of reality according to their own assumptions and requirements. 
+
+For this reason, in this ontology version of DOLCE, both events and situations are allowed, together with descriptions (the reason for the inclusion of the D&amp;S framewrok in DOLCE), in order to encode the modelling needs, independently from the position (if any) chosen by the model designer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="it">Evento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Concept that classifies an Event . An event type describes how an Event should be interpreted, executed, expected, seen, etc., according to the Description that the EventType isDefinedIn (or used in)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Event type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di evento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>Any physical, social, or mental object, or a substance. Following DOLCE Full, objects are always participating in some event (at least their own life), and are spatially located.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+        <rdfs:label xml:lang="it">Oggetto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>A view, consistent with (&apos;satisfying&apos;) a Description, on a set of entities. 
+It can also be seen as a &apos;relational context&apos; created by an observer on the basis of a &apos;frame&apos; (i.e. a Description). 
+For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan; a DiagnosedSituation is a context of observed entities that is interpreted on the basis of a Diagnosis, etc.
+Situation is also able to represent reified n-ary relations, where isSettingFor is the top-level relation for all binary projections of the n-ary relation. 
+If used in a transformation pattern for n-ary relations, the designer should take care of adding (some or all) OWL2 keys, corresponding to binary projections of the n-ary, to a subclass of Situation. Otherwise the &apos;identification constraint&apos; (Calvanese et al., IJCAI 2001) might be violated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

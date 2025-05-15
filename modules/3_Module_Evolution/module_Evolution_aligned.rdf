@@ -1,0 +1,661 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.EvolutionModel/evo/"
+     xml:base="http://www.EvolutionModel/evo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:evo="http://www.EvolutionModel/evo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.EvolutionModel/evo/">
+        <owl:imports rdf:resource="http://www.ObjectInSituationModule/ois/"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.EvolutionModel/evo/#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModel/evo/#creates">
+        <rdfs:domain rdf:resource="http://www.EvolutionModel/evo/#ConceptualVariation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
+        <rdfs:comment xml:lang="en">The property relates the :ConceptualVariation to the Visual Item version resulting from intervention</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModel/evo/#manifestsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModel/evo/#manifestsIn">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:comment xml:lang="en">The property relates a CH artifact to the physical versions that are created by a physical act that consistently modifies the artifact but without affecting its identity. It is the result of the action of a crm:E81_Transformation that generates a new version of the item (and not a fully new item).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.EvolutionModel/evo/#modifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.EvolutionModel/evo/#modifies">
+        <rdfs:domain rdf:resource="http://www.EvolutionModel/evo/#ConceptualVariation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
+        <rdfs:comment xml:lang="en">The property relates the :ConceptualVariation to the Visual Item it modifies, i.e., the version of the work before the intervention</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#includesObjectFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.ObjectInSituationModule/ois/#includesObjectFunction">
+        <rdfs:domain rdf:resource="http://www.ObjectInSituationModule/ois/#ObjectInSituation"/>
+        <rdfs:range rdf:resource="http://www.ObjectInSituationModule/ois/#Function"/>
+        <rdfs:comment>Property to specify which function an object acquires in a specific situation</rdfs:comment>
+        <rdfs:label xml:lang="en">includes object function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P110_augmented -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P110_augmented">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property identifies the instance of E24 Physical Human-Made Thing that is added to (augmented) in an instance of E79 Part Addition.Although an instance of E79 Part Addition event normally concerns only one instance of E24 Physical Human-Made Thing, it is possible to imagine circumstances under which more than one item might be added to (augmented). For example, the artist Jackson Pollock trailing paint onto multiple canvasses.</rdfs:comment>
+        <rdfs:label xml:lang="en">augmented</rdfs:label>
+        <skos:notation>P110</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P111_added -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P111_added">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property identifies the instance of E18 Physical Thing that is added during an instance of E79 Part Addition activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">added</rdfs:label>
+        <skos:notation>P111</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P112_diminished -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P112_diminished">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property identifies the instance of E18 Physical Thing that was diminished by an instance of E80 Part Removal.Although an instance of E80 Part removal activity normally concerns only one instance of E18 Physical Thing, it is possible to imagine circumstances under which more than one item might be diminished by a single instance of E80 Part Removal activity. </rdfs:comment>
+        <rdfs:label xml:lang="en">diminished</rdfs:label>
+        <skos:notation>P112</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P113_removed -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P113_removed">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property identifies the instance of E18 Physical Thing that is removed during an instance of E80 Part Removal activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">removed</rdfs:label>
+        <skos:notation>P113</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E81_Transformation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property identifies the instance or instances of E18 Physical Thing that are the result of an instance of E81 Transformation. New items replace the transformed item or items, which cease to exist as units of documentation. The physical continuity between the old and the new is expressed by the links to the common instance of E81 Transformation.</rdfs:comment>
+        <rdfs:label xml:lang="en">resulted in</rdfs:label>
+        <skos:notation>P123</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P124_transformed -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P124_transformed">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E81_Transformation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property identifies the instance or instances E18 Physical Thing that have ceased to exist due to an instance of E81 Transformation.The item that has ceased to exist and was replaced by the result of the Transformation. The continuity between both items, the new and the old, is expressed by the links to the common instance of E81 Transformation.</rdfs:comment>
+        <rdfs:label xml:lang="en">transformed</rdfs:label>
+        <skos:notation>P124</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P128_carries"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
+        <rdfs:comment xml:lang="en">This property documents an instance of E36 Visual Item shown by an instance of E24 Physical Human-Made Thing.This property is similar to P62 depicts (is depicted by) in that it associates an instance of E24 Physical Human-Made Thing with a visual representation. However, P65 shows visual item (is shown by) differs from the P62 depicts (is depicted by) property in that it makes no claims about what the instance of E36 Visual Item is deemed to represent. An instance of E36 Visual Item identifies a recognisable image or visual symbol, regardless of what this image may or may not represent.For example, all recent British coins bear a portrait of Queen Elizabeth II, a fact that is correctly documented using P62 depicts (is depicted by). Different portraits have been used at different periods, however. P65 shows visual item (is shown by) can be used to refer to a particular portrait.P65 shows visual item (is shown by) may also be used for Visual Items such as signs, marks and symbols, for example the &apos;&apos;Maltese Cross&apos;&apos; or the &apos;&apos;copyright symbol’ that have no particular representational content. This property is part of the fully developed path E24 Physical Human-Made Thing, P65 shows visual item, E36 Visual Item, P138 represents to E1 CRM Entity which is shortcut by, P62 depicts (is depicted by).</rdfs:comment>
+        <rdfs:label xml:lang="en">shows visual item</rdfs:label>
+        <skos:notation>P65</skos:notation>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>A relation between an object and a process, e.g. &apos;John took part in the discussion&apos;, &apos;a large mass of snow fell during the avalanche&apos;, or &apos;a cook, some sugar, flour, etc. are all present in the cooking of a cake&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">ha come partecipante</rdfs:label>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>A relation between an object and a role, e.g. the person &apos;John&apos; has role &apos;student&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">ha ruolo</rdfs:label>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isEventIncludedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:comment>A relation between situations and events, e.g. &apos;this morning I&apos;ve prepared my coffee and had my fingers burnt&apos; (i.e.: the preparation of my coffee this morning included a burning of my fingers).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">include l&apos;evento</rdfs:label>
+        <rdfs:label xml:lang="en">includes event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isObjectIncludedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>A relation between situations and objects, e.g. &apos;this morning I&apos;ve prepared my coffee and had my fingers burnt&apos; (i.e.: the preparation of my coffee this morning included me).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">include l&apos;oggetto</rdfs:label>
+        <rdfs:label xml:lang="en">includes object</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTimeIncludedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:comment>A relation between situations and time intervals, e.g. &apos;this morning I&apos;ve prepared my coffee and had my fingers burnt&apos; (i.e.: preparing my coffee was held this morning). A data value attached to the time interval typically complements this modelling pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">include tempo</rdfs:label>
+        <rdfs:label xml:lang="en">includes time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>A relation between any entities, e.g. &apos;brain is a part of the human body&apos;. See dul:hasPart for additional documentation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <rdfs:label xml:lang="it">è parte di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>A relation between situations and entities, e.g. &apos;this morning I&apos;ve prepared my coffee with a new fantastic Arabica&apos;, i.e.: the preparation of my coffee this morning is the setting for (an amount of) a new fantastic Arabica.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">include</rdfs:label>
+        <rdfs:label xml:lang="en">is setting for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>A relation between entities, expressing a &apos;sequence&apos; schema. 
+E.g. &apos;year 1999 precedes 2000&apos;, &apos;deciding what coffee to use&apos; precedes &apos;preparing coffee&apos;, &apos;World War II follows World War I&apos;, &apos;in the Milan to Rome autoroute, Bologna precedes Florence&apos;, etc.
+It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. 
+Subproperties can be defined in order to distinguish the different uses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="it">precede</rdfs:label>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <rdfs:comment>A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">satisfies</rdfs:label>
+        <rdfs:label xml:lang="it">soddisfa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.EvolutionModel/evo/#ConceptualVariation -->
+
+    <owl:Class rdf:about="http://www.EvolutionModel/evo/#ConceptualVariation">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:comment>The class identifies an activity that modifies immaterial visual traits of a CH object, such as the subject depicted, creating two versions of the immaterial object, which correspond to the version preceding the intervention and the one resulting from it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.EvolutionModel/evo/#Storyline -->
+
+    <owl:Class rdf:about="http://www.EvolutionModel/evo/#Storyline">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:comment>&apos;A ga:Storyline is a UFO:ComplexEvent that can be split into (i) ga:Object-Storyline, which is composed of participations of a single UFO:Object, and (ii) ga:Bundle-Storyline (Kublers’ “fibers of duration”), in which two or more UFO:Objects participate.&apos; 
+
+See the UML model of Storylines defined in: van den Heuvel, C., &amp; Zamborlini, V. (2021). Chapter 6. Modeling and Visualizing Storylines of Historical Interactions. Kubler’s Shape of Time and Rembrandt’s Night Watch. In R. P. Smiraglia &amp; A. Scharnhorst (Eds.), Linking Knowledge (pp. 99–141). Ergon – ein Verlag in der Nomos Verlagsgesellschaft. https://doi.org/10.5771/9783956506611-99</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#Function -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#Function">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+        <rdfs:comment>A class identifying the function that an object acquires (e.g., the “drinking” function of a vessel or a liturgic function of a religious object)</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#ObjectInSituation -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#ObjectInSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:comment xml:lang="en">A specific type of Situation in which an object presents special, relevant features that cannot be described as a modification of the object (e.g., the change of its function). It is meant to be related to a :HistoricalFrame which provides the relation to the belief system in which the object is situated or to a dul:Event in which such characteristics are shown.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object in Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#PracticalFunction -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#PracticalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#Function"/>
+        <owl:disjointWith rdf:resource="http://www.ObjectInSituationModule/ois/#SocialFunction"/>
+        <rdfs:comment xml:lang="en">A class identifying the practical function that an object acquires (e.g., the “drinking” function of a vessel)</rdfs:comment>
+        <rdfs:label xml:lang="en">Practical Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ObjectInSituationModule/ois/#SocialFunction -->
+
+    <owl:Class rdf:about="http://www.ObjectInSituationModule/ois/#SocialFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ObjectInSituationModule/ois/#Function"/>
+        <rdfs:comment>A class identifying the socially attributed, non strictly practical function that an object acquires (e.g., the healing function of St. Servatius cup in a catholic context)</rdfs:comment>
+        <rdfs:label xml:lang="en">Social Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+        <rdfs:comment>This class comprises all persistent physical items of any size that are purposely created by human activity. This class comprises, besides others, Human-Made objects, such as a sword, and Human-Made features, such as rock art. For example, a “cup and ring” carving on bedrock is regarded as instance of E24 Physical Human-Made Thing.Instances of Human-Made thing may be the result of modifying pre-existing physical things, preserving larger parts or most of the original matter and structure, which poses the question if they are new or even Human-Made, the respective interventions of production made on such original material should be obvious and sufficient to regard that the product has a new, distinct identity and intended function and is human-made. Substantial continuity of the previous matter and structure in the new product can be documented by describing the production process also as an instance of E81 Transformation.Whereas interventions of conservation and repair are not regarded to produce a new Human-Made thing, the results of preparation of natural history specimens that substantially change their natural or original state should be regarded as physical Human-Made things, including the uncovering of petrified biological features from a solid piece of stone. On the other side, scribbling a museum number on a natural object should not be regarded to make it Human-Made. This notwithstanding, parts, sections, segments, or features of a physical Human-Made thing may continue to be non-Human-Made and preserved during the production process, for example natural pearls used as a part of an eardrop.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Human-Made Thing</rdfs:label>
+        <skos:notation>E24</skos:notation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:comment>This class comprises the intellectual or conceptual aspects of recognisable marks, images and other visual works.This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype. For example, a mark such as the ICOM logo is generally considered to be the same logo when used on any number of publications. The size, orientation and colour may change, but the logo remains uniquely identifiable. The same is true of images that are reproduced many times. This means that visual items are independent of their physical support.The class E36 Visual Item provides a means of identifying and linking together instances of E24 Physical Human-Made Thing that carry the same visual qualities (symbols, marks or images etc.). The property P62 depicts (is depicted by) between E24 Physical Human-Made Thing and depicted subjects (E1 CRM Entity) is a shortcut of the more fully developed path from E24 Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138 represents (has representation) to E1CRM Entity, which in addition captures the optical features of the depiction. </rdfs:comment>
+        <rdfs:label xml:lang="en">Visual Item</rdfs:label>
+        <skos:notation>E36</skos:notation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
+        <rdfs:comment>This class comprises activities that result in an instance of E18 Physical Thing being increased, enlarged or augmented by the addition of a part. Typical scenarios include the attachment of an accessory, the integration of a component, the addition of an element to an aggregate object, or the accessioning of an object into a curated instance of E78 Curated Holding. Both the E18 Physical Thing being augmented and the E18 Physical Thing that is being added are treated as separate identifiable wholes prior to the instance of E79 Part Addition. Following the addition of parts, the resulting assemblages are treated objectively as single identifiable wholes, made up of constituent or component parts bound together either physically (for example the engine becoming a part of the car), or by sharing a common purpose (such as the 32 chess pieces that make up a chess set). This class of activities forms a basis for reasoning about the history and continuity of identity of objects that are integrated into other objects over time, such as precious gemstones being repeatedly incorporated into different items of jewellery, or cultural artefacts being added to different museum instances of E78 Curated Holding over their lifespan..</rdfs:comment>
+        <rdfs:label xml:lang="en">Part Addition</rdfs:label>
+        <skos:notation>E79</skos:notation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
+        <rdfs:comment>This class comprises the activities that result in an instance of E18 Physical Thing being decreased by the removal of a part.Typical scenarios include the detachment of an accessory, the removal of a component or part of a composite object, or the deaccessioning of an object from a curated collection, an instance of E78 Curated Holding. If the instance of E80 Part Removal results in the total decomposition of the original object into pieces, such that the whole ceases to exist, the activity should instead be modelled as an instance of E81 Transformation, i.e., a simultaneous destruction and production. In cases where the part removed has no discernible identity prior to its removal but does have an identity subsequent to its removal, the activity should be modelled as both an instance of E80 Part Removal and E12 Production. This class of activities forms a basis for reasoning about the history, and continuity of identity over time, of objects that are removed from other objects, such as precious gemstones being extracted from different items of jewellery, or cultural artifacts being deaccessioned from different museum collections over their lifespan.</rdfs:comment>
+        <rdfs:label xml:lang="en">Part Removal</rdfs:label>
+        <skos:notation>E80</skos:notation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E81_Transformation -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E81_Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence"/>
+        <rdfs:comment>This class comprises the events that result in the simultaneous destruction of one or more than one E18 Physical Thing and the creation of one or more than one E18 Physical Thing that preserves recognizable substance and structure from the first one(s) but has fundamentally different nature or identity.Although the old and the new instances of E18 Physical Thing are treated as discrete entities having separate, unique identities, they are causally connected through the E81 Transformation; the destruction of the old E18 Physical Thing(s) directly causes the creation of the new one(s) using or preserving some relevant substance and structure. Instances of E81 Transformation are therefore distinct from re-classifications (documented using E17 Type Assignment) or modifications (documented using E11 Modification) of objects that do not fundamentally change their nature or identity. Characteristic cases are reconstructions and repurposing of historical buildings or ruins, fires leaving buildings in ruins, taxidermy of specimen in natural history.Even though such instances of E81 Transformation are often motivated by a change of intended use, substantial material changes should justify the documentation of the result as a new instance of E18 Physical Thing and not just the change of function. The latter may be documented as an extended activity (instance of E7 Activity) of using it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transformation</rdfs:label>
+        <skos:notation>E81</skos:notation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description">
+        <owl:disjointWith rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:comment>A Description is a SocialObject that represents a conceptualization. 
+It can be thought also as a &apos;descriptive context&apos; that uses or defines concepts in order to create a view on a &apos;relational context&apos; (cf. Situation) out of a set of data or observations. 
+For example, a Plan is a Description of some actions to be executed by agents in a certain way, with certain parameters; a Diagnosis is a Description that provides an interpretation for a set of observed entities, etc.
+Descriptions &apos;define&apos; or &apos;use&apos; concepts, and can be &apos;satisfied&apos; by situations.</rdfs:comment>
+        <rdfs:comment>A Description is a SocialObject that represents a conceptualization. 
+It can be thought also as a &apos;descriptive context&apos; that uses or defines concepts in order to create a view on a &apos;relational context&apos; (cf. Situation) out of a set of data or observations. 
+For example, a Plan is a Description of some actions to be executed by agents in a certain way, with certain parameters; a Diagnosis is a Description that provides an interpretation for a set of observed entities, etc.
+Descriptions &apos;define&apos; or &apos;use&apos; concepts, and can be &apos;satisfied&apos; by situations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <rdfs:label xml:lang="it">Descrizione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:comment>Any physical, social, or mental process, event, or state.
+
+More theoretically, events can be classified in different ways, possibly based on &apos;aspect&apos; (e.g. stative, continuous, accomplishement, achievement, etc.), on &apos;agentivity&apos; (e.g. intentional, natural, etc.), or on &apos;typical participants&apos; (e.g. human, physical, abstract, food, etc.).
+Here no special direction is taken, and the following explains why: events are related to observable situations, and they can have different views at a same time.
+If a position has to be suggested here anyway, the participant-based classification of events seems the most stable and appropriate for many modelling problems.
+
+(1) Alternative aspectual views
+
+Consider a same event &apos;rock erosion in the Sinni valley&apos;: it can be conceptualized as an accomplishment (what has brought a certain state to occur), as an achievement (the state resulting from a previous accomplishment), as a punctual event (if we collapse the time interval of the erosion into a time point), or as a transition (something that has changed from a state to a different one). 
+In the erosion case, we could therefore have good motivations to shift from one aspect to another: a) causation focus, b) effectual focus, c) historical condensation, d) transition (causality).
+
+The different views refer to the same event, but are still different: how to live with this seeming paradox? 
+A typical solution e.g. in linguistics (cf. Levin&apos;s aspectual classes) and in DOLCE Full (cf. WonderWeb D18 axiomatization) is to classify events based on aspectual differences. But this solution would create different identities for a same event, where the difference is only based on the modeller&apos;s attitude.
+An alternative solution is suggested here, and exploits the notion of (observable) Situation; a Situation is a view, consistent with a Description, which can be observed of a set of entities. It can also be seen as a &apos;relational context&apos; created by an observer on the basis of a &apos;frame&apos;. Therefore, a Situation allows to create a context where each particular view can have a proper identity, while the Event preserves its own identity. 
+For example, ErosionAsAccomplishment is a Situation where rock erosion is observed as a process leading to a certain achievement: the conditions (roles, parameters) that suggest such view are stated in a Description, which acts as a &apos;theory of accomplishments&apos;. Similarly, ErosionAsTransition is a Situation where rock erosion is observed as an event that has changed a state to another: the conditions for such interpretation are stated in a different Description, which acts as a &apos;theory of state transitions&apos;.
+Consider that in no case the actual event is changed or enriched in parts by the aspectual view.
+
+(2) Alternative intentionality views
+
+Similarly to aspectual views, several intentionality views can be provided for a same Event. For example, one can investigate if an avalanche has been caused by immediate natural forces, or if there is any hint of an intentional effort to activate those natural forces.
+Also in this case, the Event as such has not different identities, while the causal analysis generates situations with different identities, according to what Description is taken for interpreting the Event. 
+On the other hand, if the possible actions of an Agent causing the starting of an avalanche are taken as parts of the Event, then this makes its identity change, because we are adding a part to it. 
+Therefore, if intentionality is a criterion to classify events or not, this depends on if an ontology designer wants to consider causality as a relevant dimension for events&apos; identity.
+
+(3) Alternative participant views
+
+A slightly different case is when we consider the basic participants to an Event. In this case, the identity of the Event is affected by the participating objects, because it depends on them. 
+For example, if snow, mountain slopes, wind, waves, etc. are considered as an avalanche basic participants, or if we also want to add water, human agents, etc., that makes the identity of an avalanche change.
+Anyway, this approach to event classification is based on the designer&apos;s choices, and more accurately mirrors lexical or commonsense classifications (see. e.g. WordNet &apos;supersenses&apos; for verb synsets).
+
+Ultimately, this discussion has no end, because realists will keep defending the idea that events in reality are not changed by the way we describe them, while constructivists will keep defending the idea that, whatever &apos;true reality&apos; is about, it can&apos;t be modelled without the theoretical burden of how we observe and describe it. 
+Both positions are in principle valid, but, if taken too radically, they focus on issues that are only partly relevant to the aim of computational ontologies, which assist domain experts in representing a certain portion of reality according to their own assumptions and requirements. 
+
+For this reason, in this ontology version of DOLCE, both events and situations are allowed, together with descriptions (the reason for the inclusion of the D&amp;S framewrok in DOLCE), in order to encode the modelling needs, independently from the position (if any) chosen by the model designer.</rdfs:comment>
+        <rdfs:comment>Any physical, social, or mental process, event, or state.
+
+More theoretically, events can be classified in different ways, possibly based on &apos;aspect&apos; (e.g. stative, continuous, accomplishement, achievement, etc.), on &apos;agentivity&apos; (e.g. intentional, natural, etc.), or on &apos;typical participants&apos; (e.g. human, physical, abstract, food, etc.).
+Here no special direction is taken, and the following explains why: events are related to observable situations, and they can have different views at a same time.
+If a position has to be suggested here anyway, the participant-based classification of events seems the most stable and appropriate for many modelling problems.
+
+(1) Alternative aspectual views
+
+Consider a same event &apos;rock erosion in the Sinni valley&apos;: it can be conceptualized as an accomplishment (what has brought a certain state to occur), as an achievement (the state resulting from a previous accomplishment), as a punctual event (if we collapse the time interval of the erosion into a time point), or as a transition (something that has changed from a state to a different one). 
+In the erosion case, we could therefore have good motivations to shift from one aspect to another: a) causation focus, b) effectual focus, c) historical condensation, d) transition (causality).
+
+The different views refer to the same event, but are still different: how to live with this seeming paradox? 
+A typical solution e.g. in linguistics (cf. Levin&apos;s aspectual classes) and in DOLCE Full (cf. WonderWeb D18 axiomatization) is to classify events based on aspectual differences. But this solution would create different identities for a same event, where the difference is only based on the modeller&apos;s attitude.
+An alternative solution is suggested here, and exploits the notion of (observable) Situation; a Situation is a view, consistent with a Description, which can be observed of a set of entities. It can also be seen as a &apos;relational context&apos; created by an observer on the basis of a &apos;frame&apos;. Therefore, a Situation allows to create a context where each particular view can have a proper identity, while the Event preserves its own identity. 
+For example, ErosionAsAccomplishment is a Situation where rock erosion is observed as a process leading to a certain achievement: the conditions (roles, parameters) that suggest such view are stated in a Description, which acts as a &apos;theory of accomplishments&apos;. Similarly, ErosionAsTransition is a Situation where rock erosion is observed as an event that has changed a state to another: the conditions for such interpretation are stated in a different Description, which acts as a &apos;theory of state transitions&apos;.
+Consider that in no case the actual event is changed or enriched in parts by the aspectual view.
+
+(2) Alternative intentionality views
+
+Similarly to aspectual views, several intentionality views can be provided for a same Event. For example, one can investigate if an avalanche has been caused by immediate natural forces, or if there is any hint of an intentional effort to activate those natural forces.
+Also in this case, the Event as such has not different identities, while the causal analysis generates situations with different identities, according to what Description is taken for interpreting the Event. 
+On the other hand, if the possible actions of an Agent causing the starting of an avalanche are taken as parts of the Event, then this makes its identity change, because we are adding a part to it. 
+Therefore, if intentionality is a criterion to classify events or not, this depends on if an ontology designer wants to consider causality as a relevant dimension for events&apos; identity.
+
+(3) Alternative participant views
+
+A slightly different case is when we consider the basic participants to an Event. In this case, the identity of the Event is affected by the participating objects, because it depends on them. 
+For example, if snow, mountain slopes, wind, waves, etc. are considered as an avalanche basic participants, or if we also want to add water, human agents, etc., that makes the identity of an avalanche change.
+Anyway, this approach to event classification is based on the designer&apos;s choices, and more accurately mirrors lexical or commonsense classifications (see. e.g. WordNet &apos;supersenses&apos; for verb synsets).
+
+Ultimately, this discussion has no end, because realists will keep defending the idea that events in reality are not changed by the way we describe them, while constructivists will keep defending the idea that, whatever &apos;true reality&apos; is about, it can&apos;t be modelled without the theoretical burden of how we observe and describe it. 
+Both positions are in principle valid, but, if taken too radically, they focus on issues that are only partly relevant to the aim of computational ontologies, which assist domain experts in representing a certain portion of reality according to their own assumptions and requirements. 
+
+For this reason, in this ontology version of DOLCE, both events and situations are allowed, together with descriptions (the reason for the inclusion of the D&amp;S framewrok in DOLCE), in order to encode the modelling needs, independently from the position (if any) chosen by the model designer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="it">Evento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Concept that classifies an Event . An event type describes how an Event should be interpreted, executed, expected, seen, etc., according to the Description that the EventType isDefinedIn (or used in)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Event type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di evento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:comment>This is a placeholder for events that are considered in their evolution, or anyway not strictly dependent on agents, tasks, and plans. 
+See Event class for some thoughts on classifying events. See also &apos;Transition&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+        <rdfs:label xml:lang="it">Processo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
+                                                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A transition is a Situation that creates a context for three TimeInterval(s), two additional different Situation(s), one Event, one Process, and at least one Object: the Event is observed as the cause for the transition, one Situation is the state before the transition, the second Situation is the state after the transition, the Process is the invariance under some different transitions (including the one represented here), in which at least one Object is situated. Finally, the time intervals position the situations and the transitional event in time.
+This class of situations partly encodes the ontology underlying typical engineering algebras for processes, e.g. Petri Nets. 
+A full representation of the transition ontology is outside the expressivity of OWL, because we would need qualified cardinality restrictions,  coreference, property equivalence, and property composition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <rdfs:label xml:lang="en">Transition</rdfs:label>
+        <rdfs:label xml:lang="it">Transizione</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
