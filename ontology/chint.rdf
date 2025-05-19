@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/"
-     xml:base="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco"
+<rdf:RDF xmlns="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/"
+     xml:base="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,18 +12,18 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
-    <owl:Ontology rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco">
+    <owl:Ontology rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint">
         <owl:imports rdf:resource="http://data.odeuropa.eu/ontology/"/>
         <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="https://periodo.github.io/edtf-ontology/edtfo.ttl"/>
-        <dct:title>Historical Context Ontology </dct:title>
+        <dct:title>Cultural Heritage Interactions Ontology </dct:title>
         <dc:contributor xml:lang="en">Charles van den Heuvel</dc:contributor>
         <dc:creator>Sofia Baroncini</dc:creator>
         <dct:created>May 2025</dct:created>
         <dct:publisher xml:lang="en">Sofia Baroncini</dct:publisher>
-        <vann:preferredNamespacePrefix>hco</vann:preferredNamespacePrefix>
-        <rdfs:comment>The Historical Context Ontology is intended to describe the interactions between material and immaterial cultural heritage (CH) that occur in time. In other words, it relates a CH object with 1) ideas and values that are relevant in the context(s) in which the object is located (i.e., a belief system) 2) the function(s) that such objects acquire in different contexts, 3) the evolution of these features over time, and 4) their interaction with contextual ephemeral events and immaterial cultural heritage practices.</rdfs:comment>
+        <vann:preferredNamespacePrefix>chint</vann:preferredNamespacePrefix>
+        <rdfs:comment>The Cultural Heritage Interactions Ontology is intended to describe the interactions between material and immaterial cultural heritage (CH) that occur in time. In other words, it relates a CH object with 1) ideas and values that are relevant in the context(s) in which the object is located (i.e., a belief system) 2) the function(s) that such objects acquire in different contexts, 3) the evolution of these features over time, and 4) their interaction with contextual ephemeral events and immaterial cultural heritage practices.</rdfs:comment>
 
         <owl:versionInfo>draft</owl:versionInfo>
     </owl:Ontology>
@@ -139,19 +139,19 @@
 
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/creates -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/creates -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/creates">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ConceptualVariation"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/creates">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ConceptualVariation"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
         <rdfs:comment xml:lang="en">The property relates the :ConceptualVariation to the Visual Item version resulting from intervention</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/manifestsIn -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/manifestsIn -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/manifestsIn">
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/manifestsIn">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
         <rdfs:comment xml:lang="en">The property relates a CH artifact to the physical versions that are created by a physical act that consistently modifies the artifact but without affecting its identity. It is the result of the action of a crm:E81_Transformation that generates a new version of the item (and not a fully new item).</rdfs:comment>
@@ -159,19 +159,19 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/modifies -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/modifies -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/modifies">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ConceptualVariation"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/modifies">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ConceptualVariation"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
         <rdfs:comment xml:lang="en">The property relates the :ConceptualVariation to the Visual Item it modifies, i.e., the version of the work before the intervention</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/believedThing -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/believedThing -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/believedThing">
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/believedThing">
         <rdfs:domain rdf:resource="https://w3id.org/icon/ontology/Belief"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment>A relation specifying the thing believed in the belief system of the culture in question.</rdfs:comment>
@@ -180,31 +180,31 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasContext -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasContext -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasContext">
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasContext">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/HistoricalFrame"/>
+        <rdfs:range rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/HistoricalFrame"/>
         <rdfs:comment xml:lang="en">Generic relation that expresses that an entity motivates the existence or characteristics of another one (e.g., the belief that St. Servatius drunk from the cup motivates the healing function of the cup)</rdfs:comment>
         <rdfs:label>has context</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasCreationContext -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasCreationContext -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasCreationContext">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasContext"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasCreationContext">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasContext"/>
         <rdfs:comment>Subproperty of :hasContext to specifically express that the object examined is related to the cultural context in which it was created (e.g., “Roman culture, is the creation context of the Roman cup created in I Century)</rdfs:comment>
         <rdfs:label xml:lang="en">has creation context</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/includesCulturalTrait -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesCulturalTrait -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/includesCulturalTrait">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/HistoricalFrame"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesCulturalTrait">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/HistoricalFrame"/>
         <rdfs:range rdf:resource="https://w3id.org/icon/ontology/CulturalPhenomenon"/>
         <rdfs:comment xml:lang="en">The property relates a Historical Frame with the immaterial traits of a culture that are relevant for the understanding of the objects. Once ontologies for societal aspects (e.g., SDHSS) will be fully worked out, the range of this property will be updated.</rdfs:comment>
         <rdfs:label xml:lang="en">includes cultural trait</rdfs:label>
@@ -212,9 +212,9 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/motivates -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/motivates -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/motivates">
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/motivates">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
         <rdfs:comment xml:lang="en">Generic relation that expresses that an entity motivates the existence or characteristics of another one (e.g., the belief that St. Servatius drunk from the cup motivates the healing function of the cup)</rdfs:comment>
@@ -223,21 +223,21 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/refersToCulture -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/refersToCulture -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/refersToCulture">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/HistoricalFrame"/>
-        <rdfs:range rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Culture"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/refersToCulture">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/HistoricalFrame"/>
+        <rdfs:range rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Culture"/>
         <rdfs:comment xml:lang="en">Relation of historical frame to the fuzzy culture it observes</rdfs:comment>
         <rdfs:label>refers to culture</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasMemberEvent -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasMemberEvent -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasMemberEvent">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasMemberEvent">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
         <rdfs:comment xml:lang="en">Property to indicate the events of a series</rdfs:comment>
         <rdfs:label xml:lang="en">has member event</rdfs:label>
@@ -245,10 +245,10 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasUnifyingFactor -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasUnifyingFactor -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasUnifyingFactor">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasUnifyingFactor">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">Property indicating the unifying factors of a collection of events repeating over time (e.g., the same place)</rdfs:comment>
         <rdfs:comment xml:lang="en">has unifying factor</rdfs:comment>
@@ -256,10 +256,10 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/includesEventsOfType -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesEventsOfType -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/includesEventsOfType">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesEventsOfType">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType"/>
         <rdfs:comment xml:lang="en">Relate the event series with the type of event that is included (e.g., mass, procession).</rdfs:comment>
         <rdfs:label xml:lang="en">includes events of type</rdfs:label>
@@ -267,11 +267,11 @@
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/includesObjectFunction -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesObjectFunction -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/includesObjectFunction">
-        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInSituation"/>
-        <rdfs:range rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Function"/>
+    <owl:ObjectProperty rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesObjectFunction">
+        <rdfs:domain rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInSituation"/>
+        <rdfs:range rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Function"/>
         <rdfs:comment>Property to specify which function an object acquires in a specific situation</rdfs:comment>
         <rdfs:label xml:lang="en">includes object function</rdfs:label>
     </owl:ObjectProperty>
@@ -522,7 +522,7 @@ This property is part of the fully developed path from E18 Physical Thing throug
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/hasMemberEvent"/>
+            <rdf:Description rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasMemberEvent"/>
         </owl:propertyChainAxiom>
         <rdfs:comment>A relation between collections and entities, e.g. &apos;my collection of saxophones includes an old Adolphe Sax original alto&apos; (i.e. my collection has member an Adolphe Sax alto).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
@@ -846,18 +846,18 @@ and intervals that adhere to features of any of EDTF Levels 0, 1, or
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ConceptualVariation -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ConceptualVariation -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ConceptualVariation">
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ConceptualVariation">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
         <rdfs:comment>The class identifies an activity that modifies immaterial visual traits of a CH object, such as the subject depicted, creating two versions of the immaterial object, which correspond to the version preceding the intervention and the one resulting from it.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Storyline -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Storyline -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Storyline">
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Storyline">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
         <rdfs:comment>&apos;A ga:Storyline is a UFO:ComplexEvent that can be split into (i) ga:Object-Storyline, which is composed of participations of a single UFO:Object, and (ii) ga:Bundle-Storyline (Kublers’ “fibers of duration”), in which two or more UFO:Objects participate.&apos; 
 
@@ -866,18 +866,18 @@ See the UML model of Storylines defined in: van den Heuvel, C., &amp; Zamborlini
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Culture -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Culture -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Culture">
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Culture">
         <rdfs:comment xml:lang="en">Fuzzy class to indicate the broad concept of culture of which the frame observes some features (e.g., Belief that St. Servatius drunk from the drinking cup)</rdfs:comment>
         <rdfs:label xml:lang="en">Culture</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/HistoricalFrame -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/HistoricalFrame -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/HistoricalFrame">
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/HistoricalFrame">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume"/>
         <rdfs:comment>The Historical Frame captures the space-time continuum  to relate the observed CH object(s) to socio-cultural characteristics of the same context(s). It captures a portion of spacetime in which the CH object coexisted with immaterial, cultural traits that interacted with them.</rdfs:comment>
         <rdfs:label xml:lang="en">Historical Frame</rdfs:label>
@@ -885,9 +885,9 @@ See the UML model of Storylines defined in: van den Heuvel, C., &amp; Zamborlini
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Function -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Function -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Function">
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Function">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
         <rdfs:comment>A class identifying the function that an object acquires (e.g., the “drinking” function of a vessel or a liturgic function of a religious object)</rdfs:comment>
         <rdfs:label xml:lang="en">Function</rdfs:label>
@@ -895,10 +895,10 @@ See the UML model of Storylines defined in: van den Heuvel, C., &amp; Zamborlini
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentRegularEvent -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentRegularEvent -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentRegularEvent">
-        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent"/>
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentRegularEvent">
+        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent"/>
         <rdfs:comment>A situation in which unifying characteristics of events regularly recurring over time are identified, and the time interval with which they are repeated can be indicated.</rdfs:comment>
         <rdfs:label xml:lang="en">Object in Recurrent Regular Event</rdfs:label>
         <rdfs:seeAlso>http://www.ontologydesignpatterns.org/cp/owl/recurrenteventseries.owl</rdfs:seeAlso>
@@ -906,30 +906,30 @@ See the UML model of Storylines defined in: van den Heuvel, C., &amp; Zamborlini
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent">
-        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInSituation"/>
-        <owl:disjointWith rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInUniqueEvent"/>
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent">
+        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInSituation"/>
+        <owl:disjointWith rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInUniqueEvent"/>
         <rdfs:comment xml:lang="en">Objects observed in situations of events repeated over time, either in regular or irregular intervals, presenting unifying characteristics.</rdfs:comment>
         <rdfs:label xml:lang="en">Object in Recurrent Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrent_IrregularEvent -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrent_IrregularEvent -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrent_IrregularEvent">
-        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInRecurrentEvent"/>
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrent_IrregularEvent">
+        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent"/>
         <rdfs:comment>A situation grouping events in which the same object participates having similar, unifying characteristics over time (e.g., function).</rdfs:comment>
         <rdfs:label>Object in Recurrent Irregular Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInSituation -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInSituation -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInSituation">
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInSituation">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
         <rdfs:comment xml:lang="en">A specific type of Situation in which an object presents special, relevant features that cannot be described as a modification of the object (e.g., the change of its function). It is meant to be related to a :HistoricalFrame which provides the relation to the belief system in which the object is situated or to a dul:Event in which such characteristics are shown.</rdfs:comment>
         <rdfs:label xml:lang="en">Object in Situation</rdfs:label>
@@ -937,31 +937,31 @@ See the UML model of Storylines defined in: van den Heuvel, C., &amp; Zamborlini
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInUniqueEvent -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInUniqueEvent -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInUniqueEvent">
-        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/ObjectInSituation"/>
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInUniqueEvent">
+        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInSituation"/>
         <rdfs:comment xml:lang="en">A situation to observe certain traits of an object present in an event that occurs only once (e.g., a function that the object acquiress in that specific event).</rdfs:comment>
         <rdfs:label xml:lang="en">Object In Unique Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/PracticalFunction -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/PracticalFunction -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/PracticalFunction">
-        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Function"/>
-        <owl:disjointWith rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/SocialFunction"/>
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/PracticalFunction">
+        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Function"/>
+        <owl:disjointWith rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/SocialFunction"/>
         <rdfs:comment xml:lang="en">A class identifying the practical function that an object acquires (e.g., the “drinking” function of a vessel)</rdfs:comment>
         <rdfs:label xml:lang="en">Practical Function</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/SocialFunction -->
+    <!-- https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/SocialFunction -->
 
-    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/SocialFunction">
-        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco/Function"/>
+    <owl:Class rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/SocialFunction">
+        <rdfs:subClassOf rdf:resource="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Function"/>
         <rdfs:comment>A class identifying the socially attributed, non strictly practical function that an object acquires (e.g., the healing function of St. Servatius cup in a catholic context)</rdfs:comment>
         <rdfs:label xml:lang="en">Social Function</rdfs:label>
     </owl:Class>
