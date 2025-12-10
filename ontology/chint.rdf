@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/"
-     xml:base="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint"
+     xml:base="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,7 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
-    <owl:Ontology rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint">
+    <owl:Ontology rdf:about="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/">
         <owl:imports rdf:resource="http://data.odeuropa.eu/ontology/"/>
         <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>

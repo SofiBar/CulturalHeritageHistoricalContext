@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1747651603072" name="duplicate:https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco" uri="hco.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747651603072" name="duplicate:https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco" uri="hco_update.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747651603072" name="duplicate:https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco" uri="hco_update_en.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747651603072" name="duplicate:https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco" uri="hco_update_en2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747651603072" name="duplicate:https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco" uri="hco_update_en3.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747651603072" name="duplicate:https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/hco" uri="hco_update_en4.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1765386601572" name="https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint" uri="chint.rdf"/>
     </group>
 </catalog>

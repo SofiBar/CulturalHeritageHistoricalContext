@@ -1,0 +1,1106 @@
+@prefix : <https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@base <https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/> .
+
+<https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://data.odeuropa.eu/ontology/> ,
+                                                                                           <http://www.cidoc-crm.org/cidoc-crm/> ,
+                                                                                           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ,
+                                                                                           <https://periodo.github.io/edtf-ontology/edtfo.ttl> ;
+                                                                               dc:contributor "Charles van den Heuvel"@en ;
+                                                                               dc:creator "Sofia Baroncini" ;
+                                                                               terms:created "May 2025" ;
+                                                                               terms:publisher "Sofia Baroncini"@en ;
+                                                                               terms:title "Cultural Heritage Interactions Ontology " ;
+                                                                               vann:preferredNamespacePrefix "chint" ;
+                                                                               rdfs:comment "The Cultural Heritage Interactions Ontology is intended to describe the interactions between material and immaterial cultural heritage (CH) that occur in time. In other words, it relates a CH object with 1) ideas and values that are relevant in the context(s) in which the object is located (i.e., a belief system) 2) the function(s) that such objects acquire in different contexts, 3) the evolution of these features over time, and 4) their interaction with contextual ephemeral events and immaterial cultural heritage practices." ;
+                                                                               owl:versionInfo "draft" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+terms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#maxCardinality
+owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minCardinality
+owl:minCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://data.odeuropa.eu/ontology/F1_generated
+<http://data.odeuropa.eu/ontology/F1_generated> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://erlangen-crm.org/current/P92_brought_into_existence> ;
+                                                rdf:type owl:AsymmetricProperty ;
+                                                rdfs:domain <http://data.odeuropa.eu/ontology/L2_Stimulus_Generation> ;
+                                                rdfs:range <http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus> ;
+                                                rdfs:comment "This property associates an instance of L2 Stimulus Generation with the L1 Sensory Stimulus which was created by the event."@en ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+
+###  http://data.odeuropa.eu/ontology/F2_perceived
+<http://data.odeuropa.eu/ontology/F2_perceived> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.ics.forth.gr/isl/CRMsci/O8_observed> ;
+                                                rdf:type owl:AsymmetricProperty ;
+                                                rdfs:domain <http://data.odeuropa.eu/ontology/L3_Sensory_Experience> ;
+                                                rdfs:range <http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus> ;
+                                                rdfs:comment "This property associates an instance of L3 Sensory Experience with the L1 Sensory Stimulus which was experienced."@en ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+
+###  http://data.odeuropa.eu/ontology/F6_evoked
+<http://data.odeuropa.eu/ontology/F6_evoked> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://erlangen-crm.org/current/P15_was_influenced_by> ;
+                                             rdfs:domain <http://data.odeuropa.eu/ontology/L3_Sensory_Experience> ;
+                                             rdfs:comment "This property associates an instance of L3 Sensory Experience with a (material or conceptual) entity which is evoked during the experience itself. This includes memories of people or situations, comparison to similar stimuli, references, etc."@en .
+
+
+###  http://erlangen-crm.org/current/P15_was_influenced_by
+<http://erlangen-crm.org/current/P15_was_influenced_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/current/P92_brought_into_existence
+<http://erlangen-crm.org/current/P92_brought_into_existence> rdf:type owl:ObjectProperty .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P10_falls_within
+<http://www.cidoc-crm.org/cidoc-crm/P10_falls_within> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P132_spatiotemporally_overlaps_with> ;
+                                                      owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P10i_contains> ;
+                                                      rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                      rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                      rdfs:comment """This property associates an instance of E92 Spacetime Volume with another instance of E92 Spacetime Volume that falls within the latter. In other words, all points in the former are also points in the latter.
+This property is transitive and reflexive."""@en ;
+                                                      rdfs:label "falls within"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P10i_contains
+<http://www.cidoc-crm.org/cidoc-crm/P10i_contains> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P132_spatiotemporally_overlaps_with> ;
+                                                   rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                   rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                   rdfs:label "contains"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P110_augmented
+<http://www.cidoc-crm.org/cidoc-crm/P110_augmented> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P31_has_modified> ;
+                                                    rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition> ;
+                                                    rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+                                                    rdfs:comment "This property identifies the instance of E24 Physical Human-Made Thing that is added to (augmented) in an instance of E79 Part Addition.Although an instance of E79 Part Addition event normally concerns only one instance of E24 Physical Human-Made Thing, it is possible to imagine circumstances under which more than one item might be added to (augmented). For example, the artist Jackson Pollock trailing paint onto multiple canvasses."@en ;
+                                                    rdfs:label "augmented"@en ;
+                                                    skos:notation "P110" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P111_added
+<http://www.cidoc-crm.org/cidoc-crm/P111_added> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> ;
+                                                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition> ;
+                                                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+                                                rdfs:comment "This property identifies the instance of E18 Physical Thing that is added during an instance of E79 Part Addition activity."@en ;
+                                                rdfs:label "added"@en ;
+                                                skos:notation "P111" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P112_diminished
+<http://www.cidoc-crm.org/cidoc-crm/P112_diminished> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P31_has_modified> ;
+                                                     rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal> ;
+                                                     rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+                                                     rdfs:comment "This property identifies the instance of E18 Physical Thing that was diminished by an instance of E80 Part Removal.Although an instance of E80 Part removal activity normally concerns only one instance of E18 Physical Thing, it is possible to imagine circumstances under which more than one item might be diminished by a single instance of E80 Part Removal activity. "@en ;
+                                                     rdfs:label "diminished"@en ;
+                                                     skos:notation "P112" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P113_removed
+<http://www.cidoc-crm.org/cidoc-crm/P113_removed> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ;
+                                                  rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal> ;
+                                                  rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+                                                  rdfs:comment "This property identifies the instance of E18 Physical Thing that is removed during an instance of E80 Part Removal activity."@en ;
+                                                  rdfs:label "removed"@en ;
+                                                  skos:notation "P113" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P11_had_participant
+<http://www.cidoc-crm.org/cidoc-crm/P11_had_participant> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ;
+                                                         rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
+                                                         rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+                                                         rdfs:comment "This property describes the active or passive participation of instances of E39 Actors in an instance of E5 Event. It documents known events in which an instance of E39 Actor has participated during the course of that actor’s life or history. The instances of E53 Place and E52 Time-Span where and when these events happened provide us with constraints about the presence of the related instances of E39 Actor in the past. Collective actors, i.e., instances of E74 Group, may physically participate in events via their representing instances of E21 Persons only. The participation of multiple actors in an event is most likely an indication of their acquaintance and interaction.The property implies that the actor was involved in the event but does not imply any causal relationship. For instance, someone having been portrayed can be said to have participated in the creation of the portrait."@en ;
+                                                         rdfs:label "had participant"@en ;
+                                                         skos:notation "P11" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in
+<http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> ;
+                                                      rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E81_Transformation> ;
+                                                      rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+                                                      rdfs:comment "This property identifies the instance or instances of E18 Physical Thing that are the result of an instance of E81 Transformation. New items replace the transformed item or items, which cease to exist as units of documentation. The physical continuity between the old and the new is expressed by the links to the common instance of E81 Transformation."@en ;
+                                                      rdfs:label "resulted in"@en ;
+                                                      skos:notation "P123" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P124_transformed
+<http://www.cidoc-crm.org/cidoc-crm/P124_transformed> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> ;
+                                                      rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E81_Transformation> ;
+                                                      rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+                                                      rdfs:comment "This property identifies the instance or instances E18 Physical Thing that have ceased to exist due to an instance of E81 Transformation.The item that has ceased to exist and was replaced by the result of the Transformation. The continuity between both items, the new and the old, is expressed by the links to the common instance of E81 Transformation."@en ;
+                                                      rdfs:label "transformed"@en ;
+                                                      skos:notation "P124" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P132_spatiotemporally_overlaps_with
+<http://www.cidoc-crm.org/cidoc-crm/P132_spatiotemporally_overlaps_with> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                                         rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                                         rdfs:comment """This symmetric property associates two instances of E92 Spacetime Volume that have some of their extents in common. If only the fuzzy boundaries of the instances of E92 Spacetime Volume overlap, this property cannot be determined from observation alone and therefore should not be applied. However, there may be other forms of justification that the two instances of E92 Spacetime Volume must have some of their extents in common regardless of where and when precisely.
+If this property holds for two instances of E92 Spacetime Volume then it cannot be the case that P133 is spatiotemporally separated from also holds for the same two instances. Furthermore, there are cases where neither P132 spatiotemporally overlaps with nor P133 is spatiotemporally separated from holds between two instances of E92 Spacetime Volume. This would occur where only an overlap of the fuzzy boundaries of the two instances of E92 Spacetime Volume occurs and no other evidence is available.
+This property is not transitive. This property is symmetric. This property is reflexive."""@en ;
+                                                                         rdfs:label "spatiotemporally overlaps with"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P133_is_spatiotemporally_separated_from
+<http://www.cidoc-crm.org/cidoc-crm/P133_is_spatiotemporally_separated_from> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                                             rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                                             rdfs:comment """This symmetric property associates two instances of E92 Spacetime Volume that have no extents in common. If only the fuzzy boundaries of the instances of E92 Spacetime Volume overlap, this property cannot be determined from observation alone and therefore should not be applied. However, there may be other forms of justification that the two instances of E92 Spacetime Volume must not have any of their extents in common regardless of where and when precisely.
+If this property holds for two instances of E92 Spacetime Volume then it cannot be the case that P132 spatiotemporally overlaps with also holds for the same two instances. Furthermore, there are cases where neither P132 spatiotemporally overlaps with nor P133 is spatiotemporally separated from holds between two instances of E92 Spacetime Volume. This would occur where only an overlap of the fuzzy boundaries of the two instances of E92 Spacetime Volume occurs and no other evidence is available.
+This property is not transitive. This property is symmetric. This property is irreflexive."""@en ;
+                                                                             rdfs:label "is spatiotemporally separated from"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection
+<http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection> rdf:type owl:ObjectProperty ;
+                                                                  owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P160i_is_temporal_projection_of> ;
+                                                                  rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                                  rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+                                                                  rdfs:comment "This property describes the temporal projection of an instance of E92 Spacetime Volume. The property P4 has time-span is the same as P160 has temporal projection if it is used to document an instance of E4 Period or any subclass of it."@en ;
+                                                                  rdfs:label "has temporal projection"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection
+<http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection> rdf:type owl:ObjectProperty ;
+                                                                 owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P161i_is_spatial_projection_of> ;
+                                                                 rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                                                                 rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E53_Place> ;
+                                                                 rdfs:comment """This property associates an instance of E92 Spacetime Volume with an instance of E53 Place that is the result of the spatial projection of the instance of the E92 Spacetime Volume on a reference space.
+In general, there can be more than one useful reference space (for reference space see P156 occupies and P157 is at rest relative to) to describe the spatial projection of a spacetime volume, for example, in describing a sea battle, the difference between the battle ship and the seafloor as reference spaces. Thus, it can be seen that the projection is not unique.
+The spatial projection is the actual spatial coverage of a spacetime volume, which normally has fuzzy boundaries except for instances of E92 Spacetime Volume which are geometrically defined in the same reference system as the range of this property and are an exception to this and do not have fuzzy boundaries. Modelling explicitly fuzzy spatial projections serves therefore as a common topological reference of different spatial approximations rather than absolute geometric determination, for instance for relating outer or inner spatial boundaries for the respective spacetime volumes.
+The spatial projection is unique with respect to the reference system. For instance, there is exactly one spatial projection of Lord Nelson’s dying relative to the ship HMS Victory, i.e. the location of his body relative to the ship HMS Victory at the time of his death.
+In case the domain of an instance of P161 has spatial projection is an instance of E4 Period, the spatial projection describes all areas that period was ever present at, for instance, the Roman Empire.
+This property is part of the fully developed path from E18 Physical Thing through P196 defines, E92 Spacetime Volume, P161 has spatial projection to E53 Place, which in turn is implied by P156 occupies (is occupied by)."""@en ;
+                                                                 rdfs:label "has spatial projection"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P2_has_type
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                                 rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+                                                 rdfs:comment "This property allows sub typing of CIDOC CRM entities –a form of specialisation – through the use of a terminological hierarchy, or thesaurus. The CIDOC CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CIDOC CRM hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given in the section “About Types” in the section on “Specific Modelling Constructs” of this document.This property is a shortcut for the path from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55 Type."@en ;
+                                                 rdfs:label "has type"@en ;
+                                                 skos:notation "P2" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span
+<http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> ;
+                                                      rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+                                                      rdfs:comment "This property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span during which it was on-going. The associated instance of E52 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active. More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only if they come into being and end being due to identical declarations or events."@en ;
+                                                      rdfs:label "has time-span"@en ;
+                                                      skos:notation "P4" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P128_carries> ;
+                                                           rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> ;
+                                                           rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> ;
+                                                           rdfs:comment "This property documents an instance of E36 Visual Item shown by an instance of E24 Physical Human-Made Thing.This property is similar to P62 depicts (is depicted by) in that it associates an instance of E24 Physical Human-Made Thing with a visual representation. However, P65 shows visual item (is shown by) differs from the P62 depicts (is depicted by) property in that it makes no claims about what the instance of E36 Visual Item is deemed to represent. An instance of E36 Visual Item identifies a recognisable image or visual symbol, regardless of what this image may or may not represent.For example, all recent British coins bear a portrait of Queen Elizabeth II, a fact that is correctly documented using P62 depicts (is depicted by). Different portraits have been used at different periods, however. P65 shows visual item (is shown by) can be used to refer to a particular portrait.P65 shows visual item (is shown by) may also be used for Visual Items such as signs, marks and symbols, for example the ''Maltese Cross'' or the ''copyright symbol’ that have no particular representational content. This property is part of the fully developed path E24 Physical Human-Made Thing, P65 shows visual item, E36 Visual Item, P138 represents to E1 CRM Entity which is shortcut by, P62 depicts (is depicted by)."@en ;
+                                                           rdfs:label "shows visual item"@en ;
+                                                           skos:notation "P65" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by
+<http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+                                                                   rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E62> .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by
+<http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+                                                             rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E62> .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P81_ongoing_throughout
+<http://www.cidoc-crm.org/cidoc-crm/P81_ongoing_throughout> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+                                                            rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E61> ;
+                                                            rdfs:comment "This property associates an instance of E52 Time-Span with an instance of E61 Time Primitive specifying a minimum period of time covered by it. Since Time-Spans may not have precisely known temporal extents, the CIDOC CRM supports statements about the minimum and maximum temporal extents of Time-Spans. This property allows a Time-Span’s minimum temporal extent (i.e., its inner boundary) to be assigned an E61 Time Primitive value. Time Primitives are treated by the CIDOC CRM as application or system specific date intervals, and are not further analysed. If different sources of evidence justify different minimum extents without contradicting each other, the smallest interval including all these extents will be the best estimate. This should be taken into account for information integration."@en ;
+                                                            rdfs:label "ongoing throughout"@en ;
+                                                            skos:notation "P81" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within
+<http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+                                                             rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E61> ;
+                                                             rdfs:comment "This property describes the maximum period of time within which an E52 Time-Span falls. Since Time-Spans may not have precisely known temporal extents, the CIDOC CRM supports statements about the minimum and maximum temporal extents of Time-Spans. This property allows a Time-Span’s maximum temporal extent (i.e., its outer boundary) to be assigned an E61 Time Primitive value. Time Primitives are treated by the CIDOC CRM as application or system specific date intervals, and are not further analysed. If different sources of evidence justify different maximum extents without contradicting each other, the resulting intersection of all these extents will be the best estimate. This should be taken into account for information integration."@en ;
+                                                             rdfs:label "at some time within"@en ;
+                                                             skos:notation "P82" .
+
+
+###  http://www.ics.forth.gr/isl/CRMsci/O8_observed
+<http://www.ics.forth.gr/isl/CRMsci/O8_observed> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                                                                  owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf> ;
+                                                                  rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection> ;
+                                                                  rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                  owl:propertyChainAxiom ( :hasMemberEvent
+                                                                                         ) ;
+                                                                  rdfs:comment "A relation between collections and entities, e.g. 'my collection of saxophones includes an old Adolphe Sax original alto' (i.e. my collection has member an Adolphe Sax alto)." ;
+                                                                  rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                  rdfs:label "has member"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                                                                       rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+                                                                       rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> ;
+                                                                       rdfs:comment "A relation between an object and a process, e.g. 'John took part in the discussion', 'a large mass of snow fell during the avalanche', or 'a cook, some sugar, flour, etc. are all present in the cooking of a cake'." ;
+                                                                       rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                       rdfs:label "has participant"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> ;
+                                                                owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf> ;
+                                                                rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> ;
+                                                                rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> ;
+                                                                rdfs:comment "A relation between an object and a role, e.g. the person 'John' has role 'student'." ;
+                                                                rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                rdfs:label "has role"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting> owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                      owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isEventIncludedIn> ;
+                                                                      rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                                      rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+                                                                      rdfs:comment "A relation between situations and events, e.g. 'this morning I've prepared my coffee and had my fingers burnt' (i.e.: the preparation of my coffee this morning included a burning of my fingers)." ;
+                                                                      rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                      rdfs:label "includes event"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                       owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isObjectIncludedIn> ;
+                                                                       rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                                       rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> ;
+                                                                       rdfs:comment "A relation between situations and objects, e.g. 'this morning I've prepared my coffee and had my fingers burnt' (i.e.: the preparation of my coffee this morning included me)." ;
+                                                                       rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                       rdfs:label "includes object"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                     owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTimeIncludedIn> ;
+                                                                     rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                                     rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval> ;
+                                                                     rdfs:comment "A relation between situations and time intervals, e.g. 'this morning I've prepared my coffee and had my fingers burnt' (i.e.: preparing my coffee was held this morning). A data value attached to the time interval typically complements this modelling pattern." ;
+                                                                     rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                     rdfs:label "includes time"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                                                                 rdf:type owl:TransitiveProperty ,
+                                                                          owl:ReflexiveProperty ;
+                                                                 rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                 rdfs:comment "A relation between any entities, e.g. 'brain is a part of the human body'. See dul:hasPart for additional documentation." ;
+                                                                 rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                 rdfs:label "is part of"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy> owl:inverseOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                                                                     rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                                     rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                     rdfs:comment "A relation between situations and entities, e.g. 'this morning I've prepared my coffee with a new fantastic Arabica', i.e.: the preparation of my coffee this morning is the setting for (an amount of) a new fantastic Arabica." ;
+                                                                     rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                     rdfs:label "is setting for"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                                                                 rdf:type owl:TransitiveProperty ;
+                                                                 rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                 rdfs:comment """A relation between entities, expressing a 'sequence' schema. 
+E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc.
+It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. 
+Subproperties can be defined in order to distinguish the different uses.""" ;
+                                                                 rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                 rdfs:label "precedes"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                                                                  rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                                  rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+                                                                  rdfs:comment "A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan." ;
+                                                                  rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                  rdfs:label "satisfies"@en .
+
+
+###  http://www.w3.org/2006/time#after
+<http://www.w3.org/2006/time#after> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <http://www.w3.org/2006/time#before> ;
+                                    rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
+                                    rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                                    rdfs:comment "Gives directionality to time. If a temporal entity T1 is after another temporal entity T2, then the beginning of T1 is after the end of T2. "@en ;
+                                    rdfs:label "after"@en .
+
+
+###  http://www.w3.org/2006/time#before
+<http://www.w3.org/2006/time#before> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
+                                     rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                                     rdfs:comment "Gives directionality to time. If a temporal entity T1 is before another temporal entity T2, then the end of T1 is before the beginning of T2. Thus, \"before\" can be considered to be basic to instants and derived for intervals"@en ;
+                                     rdfs:label "before"@en .
+
+
+###  http://www.w3.org/2006/time#hasBeginnging
+<http://www.w3.org/2006/time#hasBeginnging> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://www.w3.org/2006/time#hasTime> ;
+                                            rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
+                                            rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                                            rdfs:comment "Beginning of a temporal entity"@en ;
+                                            rdfs:label "has beginning"@en .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://www.w3.org/2006/time#hasTime> ;
+                                     rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
+                                     rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                                     rdfs:comment "End of a temporal entity"@en ;
+                                     rdfs:label "has end"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/believedThing
+:believedThing rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://w3id.org/icon/ontology/Belief> ;
+               rdfs:range owl:Thing ;
+               rdfs:comment "A relation specifying the thing believed in the belief system of the culture in question." ;
+               rdfs:label "believed thing" .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/creates
+:creates rdf:type owl:ObjectProperty ;
+         rdfs:domain :ConceptualVariation ;
+         rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> ;
+         rdfs:comment "The property relates the :ConceptualVariation to the Visual Item version resulting from intervention"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasContext
+:hasContext rdf:type owl:ObjectProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range :HistoricalFrame ;
+            rdfs:comment "Generic relation that expresses that an entity motivates the existence or characteristics of another one (e.g., the belief that St. Servatius drunk from the cup motivates the healing function of the cup)"@en ;
+            rdfs:label "has context" .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasCreationContext
+:hasCreationContext rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasContext ;
+                    rdfs:comment "Subproperty of :hasContext to specifically express that the object examined is related to the cultural context in which it was created (e.g., “Roman culture, is the creation context of the Roman cup created in I Century)" ;
+                    rdfs:label "has creation context"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasMemberEvent
+:hasMemberEvent rdf:type owl:ObjectProperty ;
+                rdfs:domain :ObjectInRecurrentEvent ;
+                rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+                rdfs:comment "Property to indicate the events of a series"@en ;
+                rdfs:label "has member event"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/hasUnifyingFactor
+:hasUnifyingFactor rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ObjectInRecurrentEvent ;
+                   rdfs:range owl:Thing ;
+                   rdfs:comment "Property indicating the unifying factors of a collection of events repeating over time (e.g., the same place)"@en ,
+                                "has unifying factor"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesCulturalTrait
+:includesCulturalTrait rdf:type owl:ObjectProperty ;
+                       rdfs:domain :HistoricalFrame ;
+                       rdfs:range <https://w3id.org/icon/ontology/CulturalPhenomenon> ;
+                       rdfs:comment "The property relates a Historical Frame with the immaterial traits of a culture that are relevant for the understanding of the objects. Once ontologies for societal aspects (e.g., SDHSS) will be fully worked out, the range of this property will be updated."@en ;
+                       rdfs:label "includes cultural trait"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesEventsOfType
+:includesEventsOfType rdf:type owl:ObjectProperty ;
+                      rdfs:domain :ObjectInRecurrentEvent ;
+                      rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType> ;
+                      rdfs:comment "Relate the event series with the type of event that is included (e.g., mass, procession)."@en ;
+                      rdfs:label "includes events of type"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/includesObjectFunction
+:includesObjectFunction rdf:type owl:ObjectProperty ;
+                        rdfs:domain :ObjectInSituation ;
+                        rdfs:range :Function ;
+                        rdfs:comment "Property to specify which function an object acquires in a specific situation" ;
+                        rdfs:label "includes object function"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/manifestsIn
+:manifestsIn rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> ;
+             rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> ;
+             rdfs:comment "The property relates a CH artifact to the physical versions that are created by a physical act that consistently modifies the artifact but without affecting its identity. It is the result of the action of a crm:E81_Transformation that generates a new version of the item (and not a fully new item)."@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/modifies
+:modifies rdf:type owl:ObjectProperty ;
+          rdfs:domain :ConceptualVariation ;
+          rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> ;
+          rdfs:comment "The property relates the :ConceptualVariation to the Visual Item it modifies, i.e., the version of the work before the intervention"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/motivates
+:motivates rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+           rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+           rdfs:comment "Generic relation that expresses that an entity motivates the existence or characteristics of another one (e.g., the belief that St. Servatius drunk from the cup motivates the healing function of the cup)"@en ;
+           rdfs:label "motivates" .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/refersToCulture
+:refersToCulture rdf:type owl:ObjectProperty ;
+                 rdfs:domain :HistoricalFrame ;
+                 rdfs:range :Culture ;
+                 rdfs:comment "Relation of historical frame to the fuzzy culture it observes"@en ;
+                 rdfs:label "refers to culture" .
+
+
+###  https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription
+<https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription> rdfs:domain <http://www.w3.org/2006/time#Interval> ;
+                                                                               rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> .
+
+
+###  https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime
+<https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime> rdfs:domain <http://www.w3.org/2006/time#Instant> ;
+                                                                   rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by
+<http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by> rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by
+<http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by> rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> .
+
+
+###  https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription
+<https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription> rdf:type owl:DatatypeProperty .
+
+
+###  https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime
+<https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://data.odeuropa.eu/ontology/L11_Smell
+<http://data.odeuropa.eu/ontology/L11_Smell> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus> ;
+                                             rdfs:comment """This class comprises all olfactory stimuli, or smells, considered as unique and un-repeatable, possibly existing in a specific time and place, to not be confused with possible generalisation.
+
+Example:
+* The smell of a specific rose in my garden in a rainy day (and not the general smell of roses)"""@en .
+
+
+###  http://data.odeuropa.eu/ontology/L12_Smell_Emission
+<http://data.odeuropa.eu/ontology/L12_Smell_Emission> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://data.odeuropa.eu/ontology/L2_Stimulus_Generation> ;
+                                                      rdfs:comment """This class comprises events in which a specific smell has been generated, either by human intervention or because of natural phenomena.
+
+Examples:
+* The eruption of Vesuvius in 79 d.C. emitted sulphuric smells (Pliny the Younger, Epistulae)
+* A perfumed candle is emitting good smell of lavender"""@en .
+
+
+###  http://data.odeuropa.eu/ontology/L13_Olfactory_Experience
+<http://data.odeuropa.eu/ontology/L13_Olfactory_Experience> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://data.odeuropa.eu/ontology/L3_Sensory_Experience> ;
+                                                            rdfs:comment "This class comprises activities in which an actor (human or animal) is perceiving a smell"@en .
+
+
+###  http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus
+<http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus> rdf:type owl:Class .
+
+
+###  http://data.odeuropa.eu/ontology/L2_Stimulus_Generation
+<http://data.odeuropa.eu/ontology/L2_Stimulus_Generation> rdf:type owl:Class .
+
+
+###  http://data.odeuropa.eu/ontology/L3_Sensory_Experience
+<http://data.odeuropa.eu/ontology/L3_Sensory_Experience> rdf:type owl:Class .
+
+
+###  http://id.loc.gov/datatypes/edtf/EDTF
+<http://id.loc.gov/datatypes/edtf/EDTF> rdfs:label "Extended Date/Time Format"@en ;
+                                        skos:definition """This datatype describes dates, dates and times,
+and intervals that adhere to features of any of EDTF Levels 0, 1, or
+2."""@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E21_Person
+<http://www.cidoc-crm.org/cidoc-crm/E21_Person> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object> ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+                                                rdfs:comment "This class comprises real persons who live or are assumed to have lived. Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CIDOC CRM does not propose a specific form to support reasoning about possible identity.In a bibliographic context, a name presented following the conventions usually employed for personal names will be assumed to correspond to an actual real person (an instance of E21 Person), unless evidence is available to indicate that this is not the case. The fact that a persona may erroneously be classified as an instance of E21 Person does not imply that the concept comprises personae. " ;
+                                                rdfs:label "Person"@en ;
+                                                skos:notation "E21" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing
+<http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ,
+                                                                                   <http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing> ;
+                                                                   rdfs:comment "This class comprises all persistent physical items of any size that are purposely created by human activity. This class comprises, besides others, Human-Made objects, such as a sword, and Human-Made features, such as rock art. For example, a “cup and ring” carving on bedrock is regarded as instance of E24 Physical Human-Made Thing.Instances of Human-Made thing may be the result of modifying pre-existing physical things, preserving larger parts or most of the original matter and structure, which poses the question if they are new or even Human-Made, the respective interventions of production made on such original material should be obvious and sufficient to regard that the product has a new, distinct identity and intended function and is human-made. Substantial continuity of the previous matter and structure in the new product can be documented by describing the production process also as an instance of E81 Transformation.Whereas interventions of conservation and repair are not regarded to produce a new Human-Made thing, the results of preparation of natural history specimens that substantially change their natural or original state should be regarded as physical Human-Made things, including the uncovering of petrified biological features from a solid piece of stone. On the other side, scribbling a museum number on a natural object should not be regarded to make it Human-Made. This notwithstanding, parts, sections, segments, or features of a physical Human-Made thing may continue to be non-Human-Made and preserved during the production process, for example natural pearls used as a part of an eardrop." ;
+                                                                   rdfs:label "Physical Human-Made Thing"@en ;
+                                                                   skos:notation "E24" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item
+<http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+                                                     rdfs:comment "This class comprises the intellectual or conceptual aspects of recognisable marks, images and other visual works.This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype. For example, a mark such as the ICOM logo is generally considered to be the same logo when used on any number of publications. The size, orientation and colour may change, but the logo remains uniquely identifiable. The same is true of images that are reproduced many times. This means that visual items are independent of their physical support.The class E36 Visual Item provides a means of identifying and linking together instances of E24 Physical Human-Made Thing that carry the same visual qualities (symbols, marks or images etc.). The property P62 depicts (is depicted by) between E24 Physical Human-Made Thing and depicted subjects (E1 CRM Entity) is a shortcut of the more fully developed path from E24 Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138 represents (has representation) to E1CRM Entity, which in addition captures the optical features of the depiction. " ;
+                                                     rdfs:label "Visual Item"@en ;
+                                                     skos:notation "E36" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E39_Actor
+<http://www.cidoc-crm.org/cidoc-crm/E39_Actor> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item> ;
+                                               rdfs:comment "This class comprises people, either individually or in groups, who have the potential to perform intentional actions of kinds for which someone may be held responsible. " ;
+                                               rdfs:label "Actor"@en ;
+                                               skos:notation "E39" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span
+<http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                                   rdfs:comment "This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end and a duration. Instances of E52 Time-Span have no semantic connotations about phenomena happening within the temporal extent they represent. They do not convey any meaning other than a positioning on the “time-line” of chronology. The actual extent of an instance of E52 Time-Span can be approximated by properties of E52 Time-Span giving inner and outer bounds in the form of dates (instances of E61 Time Primitive). Comparing knowledge about time-spans is fundamental for chronological reasoning.Some instances of E52 Time-Span may be defined as the actual, in principle observable, temporal extent of instances of E2 Temporal Entity via the property P4 has time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined in CRMgeo (Doerr   Hiebel 2013). Since our knowledge of history is imperfect and physical phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in approximation. An extreme case of approximation, might, for example, define an instance of E52 Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with other descriptions by which we can infer knowledge about it, such as in relative chronologies.Some instances of E52 may be defined precisely as representing a declaration of a temporal extent, as, for instance, done in a business contract. They constitute declarative time-spans as defined in CRMgeo (Doerr   Hiebel 2013) and can be described via the property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span. When used as a common E52 Time-Span for two events, it will nevertheless describe them as being simultaneous, even if nothing else is known." ,
+                                                                """This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end, and a duration.
+Instances of E52 Time-Span have no semantic connotations about phenomena happening within the temporal extent they represent. They do not convey any meaning other than a positioning on the “time-line” of chronology. The actual extent of an instance of E52 Time-Span can be approximated by properties of E52 Time-Span giving inner and outer bounds in the form of dates (instances of E61 Time Primitive). Comparing knowledge about time-spans is fundamental for chronological reasoning.
+Some instances of E52 Time-Span may be defined as the actual, in principle observable, temporal extent of instances of E2 Temporal Entity via the property P4 has time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013). Since our knowledge of history is imperfect and physical phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in approximation. An extreme case of approximation, might, for example, define an instance of E52 Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with other descriptions by which people can infer knowledge about it, such as in relative chronologies.
+Some instances of E52 may be defined precisely as representing a declaration of a temporal extent, as, for instance, done in a business contract. They constitute declarative time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013) and can be described via the property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span.
+When used as a common E52 Time-Span for two events, it will nevertheless describe them as being simultaneous, even if nothing else is known."""@en ;
+                                                   rdfs:label "Time-Span"@en ;
+                                                   skos:notation "E52" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E53_Place
+<http://www.cidoc-crm.org/cidoc-crm/E53_Place> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                               rdfs:comment """This class comprises extents in the natural space where people live, in particular on the surface of the Earth, in the pure sense of physics: independent from temporal phenomena and matter. They may serve describing the physical location of things or phenomena or other areas of interest. Geometrically, instances of E53 Place constitute single contiguous areas or a finite aggregation of disjoint areas in space which are each individually contiguous. They may have fuzzy boundaries.
+The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks, but may also be determined by reference to mobile objects. A Place can be determined by combining a frame of reference and a location with respect to this frame.
+It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, people are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object, i.e. H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
+Any instance of E18 Physical Thing can serve as a frame of reference for an instance of E53 Place. This may be documented using the property P157 is at rest relative to (provides reference space for)."""@en ;
+                                               rdfs:label "Place"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E55_Type
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object> ;
+                                              rdfs:comment "This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CIDOC CRM classes. Instances of E55 Type represent concepts in contrast to instances of E41 Appellation which are used to name instances of CIDOC CRM classes. E55 Type is the CIDOC CRM’s interface to domain specific ontologies and thesauri. These can be represented in the CIDOC CRM as subclasses of E55 Type, forming hierarchies of terms, i.e., instances of E55 Type linked via P127 has broader term (has narrower term): E55 Type. Such hierarchies may be extended with additional properties. " ,
+                                                           """This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CIDOC CRM classes. Instances of E55 Type represent concepts, in contrast to instances of E41 Appellation which are used to name instances of CIDOC CRM classes.
+E55 Type provides an interface to domain specific ontologies and thesauri. These can be represented in the CIDOC CRM as subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via P127 has broader term (has narrower term): E55 Type. Such hierarchies may be extended with additional properties."""@en ;
+                                              rdfs:label "Type"@en ;
+                                              skos:notation "E55" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E5_Event
+<http://www.cidoc-crm.org/cidoc-crm/E5_Event> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
+                                              rdfs:comment "This class comprises distinct, delimited and coherent processes and interactions of a material nature, in cultural, social or physical systems, involving and affecting instances of E77 Persistent Item in a way characteristic of the kind of process. Typical examples are meetings, births, deaths, actions of decision taking, making or inventing things, but also more complex and extended ones such as conferences, elections, building of a castle, or battles.While the continuous growth of a tree lacks the limits characteristic of an event, its germination from a seed does qualify as an event. Similarly, the blowing of the wind lacks the distinctness and limits of an event, but a hurricane, flood or earthquake would qualify as an event. Mental processes are considered as events, in cases where they are connected with the material externalization of their results; for example, the creation of a poem, a performance or a change of intention that becomes obvious from subsequent actions or declarations.The effects of an instance of E5 Event may not lead to relevant permanent changes of properties or relations of the items involved in it, for example an unrecorded performance. Of course, in order to be documented, some kind of evidence for an event must exist, be it witnesses, traces or products of the event.While instances of E4 Period always require some form of coherence between its constituent phenomena, in addition, the essential constituents of instances of E5 Event should contribute to an overall effect; for example, the statements made during a meeting and the listening of the audience.Viewed at a coarse level of detail, an instance of E5 Event may appear as if it had an ‘instantaneous’ overall effect, but any process or interaction of material nature in reality have an extent in time and space. At a fine level, instances of E5 Event may be analysed into component phenomena and phases within a space and timeframe, and as such can be seen as a period, regardless of the size of the phenomena. The reverse is not necessarily the case: not all instances of E4 Period give rise to a noteworthy overall effect and are thus not instances of E5 Event." ;
+                                              rdfs:label "Event"@en ;
+                                              skos:notation "E5" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E61
+<http://www.cidoc-crm.org/cidoc-crm/E61> rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E62
+<http://www.cidoc-crm.org/cidoc-crm/E62> rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition
+<http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E11_Modification> ;
+                                                       rdfs:comment "This class comprises activities that result in an instance of E18 Physical Thing being increased, enlarged or augmented by the addition of a part. Typical scenarios include the attachment of an accessory, the integration of a component, the addition of an element to an aggregate object, or the accessioning of an object into a curated instance of E78 Curated Holding. Both the E18 Physical Thing being augmented and the E18 Physical Thing that is being added are treated as separate identifiable wholes prior to the instance of E79 Part Addition. Following the addition of parts, the resulting assemblages are treated objectively as single identifiable wholes, made up of constituent or component parts bound together either physically (for example the engine becoming a part of the car), or by sharing a common purpose (such as the 32 chess pieces that make up a chess set). This class of activities forms a basis for reasoning about the history and continuity of identity of objects that are integrated into other objects over time, such as precious gemstones being repeatedly incorporated into different items of jewellery, or cultural artefacts being added to different museum instances of E78 Curated Holding over their lifespan.." ;
+                                                       rdfs:label "Part Addition"@en ;
+                                                       skos:notation "E79" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal
+<http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E11_Modification> ;
+                                                      rdfs:comment "This class comprises the activities that result in an instance of E18 Physical Thing being decreased by the removal of a part.Typical scenarios include the detachment of an accessory, the removal of a component or part of a composite object, or the deaccessioning of an object from a curated collection, an instance of E78 Curated Holding. If the instance of E80 Part Removal results in the total decomposition of the original object into pieces, such that the whole ceases to exist, the activity should instead be modelled as an instance of E81 Transformation, i.e., a simultaneous destruction and production. In cases where the part removed has no discernible identity prior to its removal but does have an identity subsequent to its removal, the activity should be modelled as both an instance of E80 Part Removal and E12 Production. This class of activities forms a basis for reasoning about the history, and continuity of identity over time, of objects that are removed from other objects, such as precious gemstones being extracted from different items of jewellery, or cultural artifacts being deaccessioned from different museum collections over their lifespan." ;
+                                                      rdfs:label "Part Removal"@en ;
+                                                      skos:notation "E80" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E81_Transformation
+<http://www.cidoc-crm.org/cidoc-crm/E81_Transformation> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence> ,
+                                                                        <http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence> ;
+                                                        rdfs:comment "This class comprises the events that result in the simultaneous destruction of one or more than one E18 Physical Thing and the creation of one or more than one E18 Physical Thing that preserves recognizable substance and structure from the first one(s) but has fundamentally different nature or identity.Although the old and the new instances of E18 Physical Thing are treated as discrete entities having separate, unique identities, they are causally connected through the E81 Transformation; the destruction of the old E18 Physical Thing(s) directly causes the creation of the new one(s) using or preserving some relevant substance and structure. Instances of E81 Transformation are therefore distinct from re-classifications (documented using E17 Type Assignment) or modifications (documented using E11 Modification) of objects that do not fundamentally change their nature or identity. Characteristic cases are reconstructions and repurposing of historical buildings or ruins, fires leaving buildings in ruins, taxidermy of specimen in natural history.Even though such instances of E81 Transformation are often motivated by a change of intended use, substantial material changes should justify the documentation of the result as a new instance of E18 Physical Thing and not just the change of function. The latter may be documented as an extended activity (instance of E7 Activity) of using it." ;
+                                                        rdfs:label "Transformation"@en ;
+                                                        skos:notation "E81" .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> owl:disjointWith <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> rdf:type owl:Class ;
+                                                                    owl:disjointWith <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                                                                    rdfs:comment """A Description is a SocialObject that represents a conceptualization. 
+It can be thought also as a 'descriptive context' that uses or defines concepts in order to create a view on a 'relational context' (cf. Situation) out of a set of data or observations. 
+For example, a Plan is a Description of some actions to be executed by agents in a certain way, with certain parameters; a Diagnosis is a Description that provides an interpretation for a set of observed entities, etc.
+Descriptions 'define' or 'use' concepts, and can be 'satisfied' by situations.""" ;
+                                                                    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                    rdfs:label "Description"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant> ;
+                                                                                owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object>
+                                                                              ] ;
+                                                              owl:disjointWith <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> ;
+                                                              rdfs:comment """Any physical, social, or mental process, event, or state.
+
+More theoretically, events can be classified in different ways, possibly based on 'aspect' (e.g. stative, continuous, accomplishement, achievement, etc.), on 'agentivity' (e.g. intentional, natural, etc.), or on 'typical participants' (e.g. human, physical, abstract, food, etc.).
+Here no special direction is taken, and the following explains why: events are related to observable situations, and they can have different views at a same time.
+If a position has to be suggested here anyway, the participant-based classification of events seems the most stable and appropriate for many modelling problems.
+
+(1) Alternative aspectual views
+
+Consider a same event 'rock erosion in the Sinni valley': it can be conceptualized as an accomplishment (what has brought a certain state to occur), as an achievement (the state resulting from a previous accomplishment), as a punctual event (if we collapse the time interval of the erosion into a time point), or as a transition (something that has changed from a state to a different one). 
+In the erosion case, we could therefore have good motivations to shift from one aspect to another: a) causation focus, b) effectual focus, c) historical condensation, d) transition (causality).
+
+The different views refer to the same event, but are still different: how to live with this seeming paradox? 
+A typical solution e.g. in linguistics (cf. Levin's aspectual classes) and in DOLCE Full (cf. WonderWeb D18 axiomatization) is to classify events based on aspectual differences. But this solution would create different identities for a same event, where the difference is only based on the modeller's attitude.
+An alternative solution is suggested here, and exploits the notion of (observable) Situation; a Situation is a view, consistent with a Description, which can be observed of a set of entities. It can also be seen as a 'relational context' created by an observer on the basis of a 'frame'. Therefore, a Situation allows to create a context where each particular view can have a proper identity, while the Event preserves its own identity. 
+For example, ErosionAsAccomplishment is a Situation where rock erosion is observed as a process leading to a certain achievement: the conditions (roles, parameters) that suggest such view are stated in a Description, which acts as a 'theory of accomplishments'. Similarly, ErosionAsTransition is a Situation where rock erosion is observed as an event that has changed a state to another: the conditions for such interpretation are stated in a different Description, which acts as a 'theory of state transitions'.
+Consider that in no case the actual event is changed or enriched in parts by the aspectual view.
+
+(2) Alternative intentionality views
+
+Similarly to aspectual views, several intentionality views can be provided for a same Event. For example, one can investigate if an avalanche has been caused by immediate natural forces, or if there is any hint of an intentional effort to activate those natural forces.
+Also in this case, the Event as such has not different identities, while the causal analysis generates situations with different identities, according to what Description is taken for interpreting the Event. 
+On the other hand, if the possible actions of an Agent causing the starting of an avalanche are taken as parts of the Event, then this makes its identity change, because we are adding a part to it. 
+Therefore, if intentionality is a criterion to classify events or not, this depends on if an ontology designer wants to consider causality as a relevant dimension for events' identity.
+
+(3) Alternative participant views
+
+A slightly different case is when we consider the basic participants to an Event. In this case, the identity of the Event is affected by the participating objects, because it depends on them. 
+For example, if snow, mountain slopes, wind, waves, etc. are considered as an avalanche basic participants, or if we also want to add water, human agents, etc., that makes the identity of an avalanche change.
+Anyway, this approach to event classification is based on the designer's choices, and more accurately mirrors lexical or commonsense classifications (see. e.g. WordNet 'supersenses' for verb synsets).
+
+Ultimately, this discussion has no end, because realists will keep defending the idea that events in reality are not changed by the way we describe them, while constructivists will keep defending the idea that, whatever 'true reality' is about, it can't be modelled without the theoretical burden of how we observe and describe it. 
+Both positions are in principle valid, but, if taken too radically, they focus on issues that are only partly relevant to the aim of computational ontologies, which assist domain experts in representing a certain portion of reality according to their own assumptions and requirements. 
+
+For this reason, in this ontology version of DOLCE, both events and situations are allowed, together with descriptions (the reason for the inclusion of the D&S framewrok in DOLCE), in order to encode the modelling needs, independently from the position (if any) chosen by the model designer.""" ;
+                                                              rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                              rdfs:label "Event"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies> ;
+                                                                                    owl:allValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event>
+                                                                                  ] ;
+                                                                  rdfs:comment "A Concept that classifies an Event . An event type describes how an Event should be interpreted, executed, expected, seen, etc., according to the Description that the EventType isDefinedIn (or used in)" ;
+                                                                  rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                  rdfs:label "Event type"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                               rdfs:comment "Any physical, social, or mental object, or a substance. Following DOLCE Full, objects are always participating in some event (at least their own life), and are spatially located." ;
+                                                               rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                               rdfs:label "Object"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+                                                                rdfs:comment """This is a placeholder for events that are considered in their evolution, or anyway not strictly dependent on agents, tasks, and plans. 
+See Event class for some thoughts on classifying events. See also 'Transition'.""" ;
+                                                                rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                rdfs:label "Process"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                                                                  rdfs:comment """A view, consistent with ('satisfying') a Description, on a set of entities. 
+It can also be seen as a 'relational context' created by an observer on the basis of a 'frame' (i.e. a Description). 
+For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan; a DiagnosedSituation is a context of observed entities that is interpreted on the basis of a Diagnosis, etc.
+Situation is also able to represent reified n-ary relations, where isSettingFor is the top-level relation for all binary projections of the n-ary relation. 
+If used in a transformation pattern for n-ary relations, the designer should take care of adding (some or all) OWL2 keys, corresponding to binary projections of the n-ary, to a subclass of Situation. Otherwise the 'identification constraint' (Calvanese et al., IJCAI 2001) might be violated.""" ;
+                                                                  rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                  rdfs:label "Situation"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Transition> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent> ;
+                                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject> ;
+                                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                                     owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                                     owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes> ;
+                                                                                                                                 owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event>
+                                                                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                                                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes> ;
+                                                                                                                                                                             owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
+                                                                                                                                                                           ]
+                                                                                                                                                                         ) ;
+                                                                                                                                                      rdf:type owl:Class
+                                                                                                                                                    ]
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ]
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                                     owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                     owl:onClass <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation>
+                                                                                   ] ;
+                                                                   rdfs:comment """A transition is a Situation that creates a context for three TimeInterval(s), two additional different Situation(s), one Event, one Process, and at least one Object: the Event is observed as the cause for the transition, one Situation is the state before the transition, the second Situation is the state after the transition, the Process is the invariance under some different transitions (including the one represented here), in which at least one Object is situated. Finally, the time intervals position the situations and the transitional event in time.
+This class of situations partly encodes the ontology underlying typical engineering algebras for processes, e.g. Petri Nets. 
+A full representation of the transition ontology is outside the expressivity of OWL, because we would need qualified cardinality restrictions,  coreference, property equivalence, and property composition.""" ;
+                                                                   rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                                                   rdfs:label "Transition"@en .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                      owl:disjointWith <http://www.w3.org/2006/time#ProperInterval> ;
+                                      rdfs:comment "A temporal entity with zero extent or duration"@en ;
+                                      rdfs:label "Time instant"@en ;
+                                      skos:definition "A temporal entity with zero extent or duration"@en .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/2006/time#Interval> ;
+                                       rdfs:comment "A temporal entity with an extent or duration"@en ;
+                                       rdfs:label "Time interval"@en ;
+                                       skos:definition "A temporal entity with an extent or duration"@en .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
+                                             owl:equivalentClass [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <http://www.w3.org/2006/time#Instant>
+                                                                                 <http://www.w3.org/2006/time#Interval>
+                                                                               )
+                                                                 ] ;
+                                             rdfs:subClassOf owl:Thing ;
+                                             rdfs:comment "A temporal interval or instant."@en ;
+                                             rdfs:label "Temporal entity"@en ;
+                                             skos:definition "A temporal interval or instant."@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ConceptualVariation
+:ConceptualVariation rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
+                     rdfs:comment "The class identifies an activity that modifies immaterial visual traits of a CH object, such as the subject depicted, creating two versions of the immaterial object, which correspond to the version preceding the intervention and the one resulting from it." .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Culture
+:Culture rdf:type owl:Class ;
+         rdfs:comment "Fuzzy class to indicate the broad concept of culture of which the frame observes some features (e.g., Belief that St. Servatius drunk from the drinking cup)"@en ;
+         rdfs:label "Culture"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Function
+:Function rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> ;
+          rdfs:comment "A class identifying the function that an object acquires (e.g., the “drinking” function of a vessel or a liturgic function of a religious object)" ;
+          rdfs:label "Function"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/HistoricalFrame
+:HistoricalFrame rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> ;
+                 rdfs:comment "The Historical Frame captures the space-time continuum  to relate the observed CH object(s) to socio-cultural characteristics of the same context(s). It captures a portion of spacetime in which the CH object coexisted with immaterial, cultural traits that interacted with them." ;
+                 rdfs:label "Historical Frame"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentEvent
+:ObjectInRecurrentEvent rdf:type owl:Class ;
+                        rdfs:subClassOf :ObjectInSituation ;
+                        owl:disjointWith :ObjectInUniqueEvent ;
+                        rdfs:comment "Objects observed in situations of events repeated over time, either in regular or irregular intervals, presenting unifying characteristics."@en ;
+                        rdfs:label "Object in Recurrent Event"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrentRegularEvent
+:ObjectInRecurrentRegularEvent rdf:type owl:Class ;
+                               rdfs:subClassOf :ObjectInRecurrentEvent ;
+                               rdfs:comment "A situation in which unifying characteristics of events regularly recurring over time are identified, and the time interval with which they are repeated can be indicated." ;
+                               rdfs:label "Object in Recurrent Regular Event"@en ;
+                               rdfs:seeAlso "http://www.ontologydesignpatterns.org/cp/owl/recurrenteventseries.owl" .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInRecurrent_IrregularEvent
+:ObjectInRecurrent_IrregularEvent rdf:type owl:Class ;
+                                  rdfs:subClassOf :ObjectInRecurrentEvent ;
+                                  rdfs:comment "A situation grouping events in which the same object participates having similar, unifying characteristics over time (e.g., function)." ;
+                                  rdfs:label "Object in Recurrent Irregular Event" .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInSituation
+:ObjectInSituation rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ;
+                   rdfs:comment "A specific type of Situation in which an object presents special, relevant features that cannot be described as a modification of the object (e.g., the change of its function). It is meant to be related to a :HistoricalFrame which provides the relation to the belief system in which the object is situated or to a dul:Event in which such characteristics are shown."@en ;
+                   rdfs:label "Object in Situation"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/ObjectInUniqueEvent
+:ObjectInUniqueEvent rdf:type owl:Class ;
+                     rdfs:subClassOf :ObjectInSituation ;
+                     rdfs:comment "A situation to observe certain traits of an object present in an event that occurs only once (e.g., a function that the object acquiress in that specific event)."@en ;
+                     rdfs:label "Object In Unique Event"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/PracticalFunction
+:PracticalFunction rdf:type owl:Class ;
+                   rdfs:subClassOf :Function ;
+                   owl:disjointWith :SocialFunction ;
+                   rdfs:comment "A class identifying the practical function that an object acquires (e.g., the “drinking” function of a vessel)"@en ;
+                   rdfs:label "Practical Function"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/SocialFunction
+:SocialFunction rdf:type owl:Class ;
+                rdfs:subClassOf :Function ;
+                rdfs:comment "A class identifying the socially attributed, non strictly practical function that an object acquires (e.g., the healing function of St. Servatius cup in a catholic context)" ;
+                rdfs:label "Social Function"@en .
+
+
+###  https://github.com/SofiBar/CulturalHeritageHistoricalContext/ontology/chint/Storyline
+:Storyline rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+           rdfs:comment """'A ga:Storyline is a UFO:ComplexEvent that can be split into (i) ga:Object-Storyline, which is composed of participations of a single UFO:Object, and (ii) ga:Bundle-Storyline (Kublers’ “fibers of duration”), in which two or more UFO:Objects participate.' 
+
+See the UML model of Storylines defined in: van den Heuvel, C., & Zamborlini, V. (2021). Chapter 6. Modeling and Visualizing Storylines of Historical Interactions. Kubler’s Shape of Time and Rembrandt’s Night Watch. In R. P. Smiraglia & A. Scharnhorst (Eds.), Linking Knowledge (pp. 99–141). Ergon – ein Verlag in der Nomos Verlagsgesellschaft. https://doi.org/10.5771/9783956506611-99""" .
+
+
+###  https://w3id.org/icon/ontology/Attitude
+<https://w3id.org/icon/ontology/Attitude> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/icon/ontology/CulturalPhenomenon> ;
+                                          rdfs:comment "Example term taken from Panofsky's studies, can be used as a specification of a cultural phenomemon if it can be considered an Attitude"@en ;
+                                          rdfs:isDefinedBy <https://w3id.org/icon/ontology/ICONOntology> ;
+                                          rdfs:label "Attitude"@en .
+
+
+###  https://w3id.org/icon/ontology/Belief
+<https://w3id.org/icon/ontology/Belief> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/icon/ontology/CulturalPhenomenon> ;
+                                        rdfs:comment "Example term taken from Panofsky's studies, can be used as a specification of a cultural phenomemon if it can be considered a Belief"@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/icon/ontology/ICONOntology> ;
+                                        rdfs:label "Belief"@en .
+
+
+###  https://w3id.org/icon/ontology/CulturalPhenomenon
+<https://w3id.org/icon/ontology/CulturalPhenomenon> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/icon/ontology/IconologicalSubject> ;
+                                                    rdfs:comment "The cultural phenomenon entity expresses the cultural, social and historical aspects of which the work of art can be document. The iconographical evolution of subjects can have a cultural meaning as well. Also the personal characteristics of the artist, or of the patron, can be involved (Wittkower, Van Straten). The cultural phenomena are the object of investigation of an iconological interpretation (Van Straten, 2012, p. 12), which is considered, in the current work, a level 3 interpretation."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/icon/ontology/ICONOntology> ;
+                                                    rdfs:label "Cultural Phenomenon"@en .
+
+
+###  https://w3id.org/icon/ontology/CulturalValue
+<https://w3id.org/icon/ontology/CulturalValue> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/icon/ontology/CulturalPhenomenon> ;
+                                               rdfs:comment "Example term taken from Panofsky's studies, can be used as a specification of a cultural phenomemon if it can be considered a CulturalValue"@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/icon/ontology/ICONOntology> ;
+                                               rdfs:label "Cultural Value"@en .
+
+
+###  https://w3id.org/icon/ontology/IconologicalSubject
+<https://w3id.org/icon/ontology/IconologicalSubject> rdf:type owl:Class .
+
+
+###  https://w3id.org/icon/ontology/Tendency
+<https://w3id.org/icon/ontology/Tendency> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/icon/ontology/CulturalPhenomenon> ;
+                                          rdfs:comment "Example term taken from Panofsky's studies, can be used as a specification of a cultural phenomemon if it can be considered a tendency"@en ;
+                                          rdfs:isDefinedBy <https://w3id.org/icon/ontology/ICONOntology> ;
+                                          rdfs:label "Tendency"@en .
+
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:minCardinality "2"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "2"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "2"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "0"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by> rdfs:comment "This property associates an instance of E52 Time-Span with a note detailing the scholarly or scientific opinions and justifications about the certainty, precision, sources etc. of its beginning. Such notes may also be used to elaborate arguments about constraints or to give explanations of alternatives."@en ;
+                                                                    rdfs:label "beginning is qualified by"@en ;
+                                                                    skos:notation "P79" .
+
+
+<http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by> rdfs:comment "This property associates an instance of E52 Time-Span with a note detailing the scholarly or scientific opinions and justifications about the end of this time-span concerning certainty, precision, sources etc. This property may also be used to describe arguments constraining possible dates and to distinguish reasons for alternative dates."@en ;
+                                                             rdfs:label "end is qualified by"@en ;
+                                                             skos:notation "P80" .
+
+
+<https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription> rdfs:label "has EDTF datetime description"@en ;
+                                                                               skos:definition "Value of an interval, expressed using EDTF"@en ;
+                                                                               skos:example """# June 2004 to August 2006
+
+:when a time:ProperInterval ;
+  edtfo:hasEDTFDateTimeDescription \"2004-06/2006-08\"^^edtf:EDTF
+  .""" .
+
+
+<https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime> rdfs:label "in EDTF datetime"@en ;
+                                                                   skos:definition "Position of an instant, expressed using EDTF"@en ;
+                                                                   skos:example """# the calendar year 1985
+
+:when a time:Instant ;
+  edtfo:inEDTFDateTime \"1985\"^^edtf:EDTF
+  .""" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
