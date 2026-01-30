@@ -1012,6 +1012,8 @@ Subproperties can be defined in order to distinguish the different uses.</rdfs:c
 
     <owl:ObjectProperty rdf:about="https://w3id.org/chint/ontology/hasCreationContext">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/chint/ontology/hasContext"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/chint/ontology/HistoricalFrame"/>
         <rdfs:comment>Subproperty of :hasContext to specifically express that the object examined is related to the cultural context in which it was created (e.g., “Roman culture, is the creation context of the Roman cup created in I Century)</rdfs:comment>
         <rdfs:label xml:lang="en">has creation context</rdfs:label>
     </owl:ObjectProperty>
