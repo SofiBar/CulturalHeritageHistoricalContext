@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/chint/ois/" uri="file:/C:/Users/baroncis/Documents/GitHub/CulturalHeritageHistoricalContext/modules/2_Module_Object_In_Situation/revised_final.rdf"/>
     <uri id="Imports Wizard Entry" name="http://www.ObjectInSituationModule/ois/" uri="file:/C:/Users/baroncis/Documents/GitHub/CulturalHeritageHistoricalContext/development/2_Module_Object_In_Situation/modelet_object_in_situation_aligned.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1747068166733" name="duplicate:http://www.EvolutionModel/evo/" uri="model_Evolution_aligned.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747068166733" name="duplicate:http://www.EvolutionModel/evo/" uri="model_Evolution_aligned_draft.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747068166733" name="http://www.EvolutionModelet//" uri="Modelet_Evolution.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769613634251" name="http://www.EvolutionModel/evo/" uri="module_Evolution_aligned.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769613634251" name="https://w3id.org/chint/evo/" uri="module_revised.rdf"/>
     </group>
 </catalog>

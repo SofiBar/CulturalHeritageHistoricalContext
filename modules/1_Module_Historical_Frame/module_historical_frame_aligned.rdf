@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.HistoricalFrameModule/hf/"
-     xml:base="http://www.HistoricalFrameModule/hf/"
-     xmlns:hf="http://www.HistoricalFrameModule/hf/"
+<rdf:RDF xmlns="https://w3id.org/chint/hf/"
+     xml:base="https://w3id.org/chint/hf/"
+     xmlns:hf="https://w3id.org/chint/hf/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://www.HistoricalFrameModule/hf/">
+    <owl:Ontology rdf:about="https://w3id.org/chint/hf/">
         <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
     </owl:Ontology>
     
@@ -25,9 +25,9 @@
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#believedThing -->
+    <!-- https://w3id.org/chint/hf/#believedThing -->
 
-    <owl:ObjectProperty rdf:about="http://www.HistoricalFrameModule/hf/#believedThing">
+    <owl:ObjectProperty rdf:about="https://w3id.org/chint/hf/#believedThing">
         <rdfs:domain rdf:resource="https://w3id.org/icon/ontology/Belief"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment>A relation specifying the thing believed in the belief system of the culture in question.</rdfs:comment>
@@ -36,31 +36,31 @@
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#hasContext -->
+    <!-- https://w3id.org/chint/hf/#hasContext -->
 
-    <owl:ObjectProperty rdf:about="http://www.HistoricalFrameModule/hf/#hasContext">
+    <owl:ObjectProperty rdf:about="https://w3id.org/chint/hf/#hasContext">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.HistoricalFrameModule/hf/#HistoricalFrame"/>
+        <rdfs:range rdf:resource="https://w3id.org/chint/hf/#HistoricalFrame"/>
         <rdfs:comment xml:lang="en">Generic relation that expresses that an entity motivates the existence or characteristics of another one (e.g., the belief that St. Servatius drunk from the cup motivates the healing function of the cup)</rdfs:comment>
         <rdfs:label>has context</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#hasCreationContext -->
+    <!-- https://w3id.org/chint/hf/#hasCreationContext -->
 
-    <owl:ObjectProperty rdf:about="http://www.HistoricalFrameModule/hf/#hasCreationContext">
-        <rdfs:subPropertyOf rdf:resource="http://www.HistoricalFrameModule/hf/#hasContext"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/chint/hf/#hasCreationContext">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/chint/hf/#hasContext"/>
         <rdfs:comment>Subproperty of :hasContext to specifically express that the object examined is related to the cultural context in which it was created (e.g., “Roman culture, is the creation context of the Roman cup created in I Century)</rdfs:comment>
         <rdfs:label xml:lang="en">has creation context</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#includesCulturalTrait -->
+    <!-- https://w3id.org/chint/hf/#includesCulturalTrait -->
 
-    <owl:ObjectProperty rdf:about="http://www.HistoricalFrameModule/hf/#includesCulturalTrait">
-        <rdfs:domain rdf:resource="http://www.HistoricalFrameModule/hf/#HistoricalFrame"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/chint/hf/#includesCulturalTrait">
+        <rdfs:domain rdf:resource="https://w3id.org/chint/hf/#HistoricalFrame"/>
         <rdfs:range rdf:resource="https://w3id.org/icon/ontology/CulturalPhenomenon"/>
         <rdfs:comment xml:lang="en">The property relates a Historical Frame with the immaterial traits of a culture that are relevant for the understanding of the objects. Once ontologies for societal aspects (e.g., SDHSS) will be fully worked out, the range of this property will be updated.</rdfs:comment>
         <rdfs:label xml:lang="en">includes cultural trait</rdfs:label>
@@ -68,9 +68,9 @@
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#motivates -->
+    <!-- https://w3id.org/chint/hf/#motivates -->
 
-    <owl:ObjectProperty rdf:about="http://www.HistoricalFrameModule/hf/#motivates">
+    <owl:ObjectProperty rdf:about="https://w3id.org/chint/hf/#motivates">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
         <rdfs:comment xml:lang="en">Generic relation that expresses that an entity motivates the existence or characteristics of another one (e.g., the belief that St. Servatius drunk from the cup motivates the healing function of the cup)</rdfs:comment>
@@ -79,11 +79,11 @@
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#refersToCulture -->
+    <!-- https://w3id.org/chint/hf/#refersToCulture -->
 
-    <owl:ObjectProperty rdf:about="http://www.HistoricalFrameModule/hf/#refersToCulture">
-        <rdfs:domain rdf:resource="http://www.HistoricalFrameModule/hf/#HistoricalFrame"/>
-        <rdfs:range rdf:resource="http://www.HistoricalFrameModule/hf/#Culture"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/chint/hf/#refersToCulture">
+        <rdfs:domain rdf:resource="https://w3id.org/chint/hf/#HistoricalFrame"/>
+        <rdfs:range rdf:resource="https://w3id.org/chint/hf/#Culture"/>
         <rdfs:comment xml:lang="en">Relation of historical frame to the fuzzy culture it observes</rdfs:comment>
         <rdfs:label>refers to culture</rdfs:label>
     </owl:ObjectProperty>
@@ -213,18 +213,18 @@ This property is part of the fully developed path from E18 Physical Thing throug
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#Culture -->
+    <!-- https://w3id.org/chint/hf/#Culture -->
 
-    <owl:Class rdf:about="http://www.HistoricalFrameModule/hf/#Culture">
+    <owl:Class rdf:about="https://w3id.org/chint/hf/#Culture">
         <rdfs:comment xml:lang="en">Fuzzy class to indicate the broad concept of culture of which the frame observes some features (e.g., Belief that St. Servatius drunk from the drinking cup)</rdfs:comment>
         <rdfs:label xml:lang="en">Culture</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.HistoricalFrameModule/hf/#HistoricalFrame -->
+    <!-- https://w3id.org/chint/hf/#HistoricalFrame -->
 
-    <owl:Class rdf:about="http://www.HistoricalFrameModule/hf/#HistoricalFrame">
+    <owl:Class rdf:about="https://w3id.org/chint/hf/#HistoricalFrame">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume"/>
         <rdfs:comment>The Historical Frame captures the space-time continuum  to relate the observed CH object(s) to socio-cultural characteristics of the same context(s). It captures a portion of spacetime in which the CH object coexisted with immaterial, cultural traits that interacted with them.</rdfs:comment>
         <rdfs:label xml:lang="en">Historical Frame</rdfs:label>

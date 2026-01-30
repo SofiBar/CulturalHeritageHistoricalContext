@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/baroncis/ontologies/2025/4/untitled-ontology-30/"
-     xml:base="http://www.semanticweb.org/baroncis/ontologies/2025/4/untitled-ontology-30/"
+<rdf:RDF xmlns="https://w3id.org/chint/eph/"
+     xml:base="https://w3id.org/chint/eph/"
+     xmlns:eph="https://w3id.org/chint/eph/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,11 +11,40 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
-    <owl:Ontology rdf:about="http://www.EphemeralModule/eph/">
+    <owl:Ontology rdf:about="https://w3id.org/chint/eph/">
         <owl:imports rdf:resource="http://data.odeuropa.eu/ontology/"/>
         <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <owl:imports rdf:resource="https://periodo.github.io/edtf-ontology/edtfo.ttl"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#cardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
     
 
 
@@ -65,6 +95,12 @@
     
 
 
+    <!-- http://erlangen-crm.org/current/P108i_was_produced_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P108i_was_produced_by"/>
+    
+
+
     <!-- http://erlangen-crm.org/current/P10_falls_within -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P10_falls_within">
@@ -98,6 +134,12 @@ In First Order Logic:
         <rdfs:label xml:lang="zh">P10 属于</rdfs:label>
         <skos:notation xml:lang="en">P10</skos:notation>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P10i_contains -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P10i_contains"/>
     
 
 
@@ -136,6 +178,30 @@ In First Order Logic:
     
 
 
+    <!-- http://erlangen-crm.org/current/P11i_participated_in -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P11i_participated_in"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P12_occurred_in_the_presence_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P12_occurred_in_the_presence_of"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P132_spatiotemporally_overlaps_with -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P132_spatiotemporally_overlaps_with"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P15_was_influenced_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P15_was_influenced_by"/>
+    
+
+
     <!-- http://erlangen-crm.org/current/P2_has_type -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P2_has_type">
@@ -169,6 +235,12 @@ In First Order Logic:
     
 
 
+    <!-- http://erlangen-crm.org/current/P2i_is_type_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P2i_is_type_of"/>
+    
+
+
     <!-- http://erlangen-crm.org/current/P4_has_time-span -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4_has_time-span">
@@ -196,6 +268,24 @@ In First Order Logic:
         <rdfs:label xml:lang="zh">P4 发生时段是</rdfs:label>
         <skos:notation xml:lang="en">P4</skos:notation>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P4i_is_time-span_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4i_is_time-span_of"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P92_brought_into_existence -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P92_brought_into_existence"/>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMsci/O8_observed -->
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMsci/O8_observed"/>
     
 
 
@@ -276,23 +366,55 @@ Examples:
     
 
 
+    <!-- http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus -->
+
+    <owl:Class rdf:about="http://data.odeuropa.eu/ontology/L1_Sensory_Stimulus"/>
+    
+
+
+    <!-- http://data.odeuropa.eu/ontology/L2_Stimulus_Generation -->
+
+    <owl:Class rdf:about="http://data.odeuropa.eu/ontology/L2_Stimulus_Generation"/>
+    
+
+
+    <!-- http://data.odeuropa.eu/ontology/L3_Sensory_Experience -->
+
+    <owl:Class rdf:about="http://data.odeuropa.eu/ontology/L3_Sensory_Experience"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E12_Production -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E12_Production"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E18_Physical_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E1_CRM_Entity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E20_Biological_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+    
+
+
     <!-- http://erlangen-crm.org/current/E21_Person -->
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E21_Person">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P152_has_parent"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P98i_was_born"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error5"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error6"/>
         <rdfs:comment xml:lang="en">Scope note:
 This class comprises real persons who live or are assumed to have lived. 
 Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CIDOC CRM does not propose a specific form to support reasoning about possible identity.
@@ -356,6 +478,18 @@ In First Order Logic:
     
 
 
+    <!-- http://erlangen-crm.org/current/E28_Conceptual_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E2_Temporal_Entity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    
+
+
     <!-- http://erlangen-crm.org/current/E39_Actor -->
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E39_Actor">
@@ -380,6 +514,12 @@ In First Order Logic:
         <rdfs:label xml:lang="zh">E39 参与者</rdfs:label>
         <skos:notation xml:lang="en">E39</skos:notation>
     </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E4_Period -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E4_Period"/>
     
 
 
@@ -426,12 +566,7 @@ In First Order Logic:
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E55_Type">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P135i_was_created_by"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error7"/>
         <rdfs:comment xml:lang="en">Scope note:
 This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CIDOC CRM classes. Instances of E55 Type represent concepts, in contrast to instances of E41 Appellation which are used to name instances of CIDOC CRM classes. 
 E55 Type provides an interface to domain specific ontologies and thesauri. These can be represented in the CIDOC CRM as subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via P127 has broader term (has narrower term): E55 Type. Such hierarchies may be extended with additional properties.
@@ -503,34 +638,20 @@ In First Order Logic:
     
 
 
+    <!-- http://erlangen-crm.org/current/E71_Human-Made_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E71_Human-Made_Thing"/>
+    
+
+
     <!-- http://erlangen-crm.org/current/E74_Group -->
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E74_Group">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P107_has_current_or_former_member"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P144i_gained_member_by"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P146i_lost_member_by"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P95i_was_formed_by"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error3"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error4"/>
         <rdfs:comment xml:lang="en">Scope note:
 This class comprises any gatherings or organizations of human individuals or groups that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. In such cases, it may happen that the group never had more than one member. A joint pseudonym (i.e. a name that seems indicative of an individual but that is actually used as a persona by two or more people) is a particular case of E74 Group.
 A gathering of people becomes an instance of E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an instance of E74 Group. Married couples and other concepts of family are regarded as particular examples of E74 Group.
@@ -565,6 +686,18 @@ In First Order Logic:
     
 
 
+    <!-- http://erlangen-crm.org/current/E77_Persistent_Item -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E92_Spacetime_Volume -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E92_Spacetime_Volume"/>
+    
+
+
     <!-- http://id.loc.gov/datatypes/edtf/EDTF -->
 
     <rdf:Description rdf:about="http://id.loc.gov/datatypes/edtf/EDTF">
@@ -573,6 +706,48 @@ In First Order Logic:
 and intervals that adhere to features of any of EDTF Levels 0, 1, or
 2.</skos:definition>
     </rdf:Description>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error2 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error3 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error3"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error4 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error4"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error5 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error5"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error6 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error6"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error7 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error7"/>
     
 
 
@@ -624,6 +799,27 @@ and intervals that adhere to features of any of EDTF Levels 0, 1, or
         <skos:definition xml:lang="en">A temporal interval or instant.</skos:definition>
         <skos:definition xml:lang="es">Un intervalo temporal o un instante.</skos:definition>
     </owl:Class>
+    <rdf:Description>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </rdf:Description>
 </rdf:RDF>
 
 

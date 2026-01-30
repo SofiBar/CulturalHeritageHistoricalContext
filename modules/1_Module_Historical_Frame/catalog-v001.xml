@@ -2,7 +2,6 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.cidoc-crm.org/cidoc-crm/" uri="file:/C:/Users/baroncis/Documents/ontologies/CIDOC_CRM_version7_1_3.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1747057497472" name="http://www.FrameModuleModelet/" uri="modelet_historical_frame.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1747057497472" name="https://github.com/SofiBar/CulturalHeritageHistoricalContext/hco/" uri="module_historical_frame_aligned.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769613587349" name="https://w3id.org/chint/hf/" uri="module_historical_frame_aligned.rdf"/>
     </group>
 </catalog>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1747068660560" name="http://www.semanticweb.org/baroncis/ontologies/2025/4/untitled-ontology-30/" uri="ephemeral_model_aligned2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769615072330" name="https://w3id.org/chint/eph/" uri="ephemeral_model_aligned.rdf"/>
     </group>
 </catalog>
